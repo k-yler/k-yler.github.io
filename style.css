@@ -1,0 +1,89 @@
+.intro {
+	width: 100%;
+	height: 100vh;
+	background: url("../img/01.jpg") center no-repeat;
+	background-size: cover;
+}
+.text-intro {
+	font-size: 18px;
+
+}
+.header {
+	margin-top: 30px;
+	color:black;
+}
+.text-text {
+	margin-top: 130px;
+	color: white ;
+	font-size: 40px;
+}
+.text-text-2 {
+	margin-top: 30px;
+	font-size: 18px;
+	color: white ;
+}
+.logo-btn {
+	margin-top: 75px;
+	margin-bottom: 60px;
+	background-color: rgba(0, 0, 0, 0);
+	border: 2px solid white;
+	color: white;
+}
+.head-text {
+	font-size: 35px;
+}
+.head2{
+	margin-top: 80px;
+}
+.pic-1 {
+	width: 100%;
+	height: 33vh;
+	background: url("../img/bus.jpg") center no-repeat;
+	background-size: cover;
+}
+.pic-2 {
+	width: 100%;
+	height: 33vh;
+	background: url("../img/hz.jpg") center no-repeat;
+	background-size: cover;
+}
+.pic-3 {
+	width: 100%;
+	height: 33vh;
+	background: url("../img/train.jpg") center no-repeat;
+	background-size: cover;
+}
+.tnp {
+	padding-top: 20%;
+	color: white;
+	font-size: 30px;
+}
+.pic-1, .pic-2, .pic-3 {
+	margin-top: 50px;
+}
+.tpp {
+	margin-top: 20px;
+
+}
+.head-text2 {
+	margin-top: 60px;
+	font-size: 35px;
+}
+/*.box {
+	border:1px solid red;
+	height: 100px;
+}*/
+.ppp {
+	font-size: 15px;
+}
+.last {
+	margin-top: 50px;
+	margin-bottom:60px;
+}
+.tee {
+	margin: 0;
+	margin-bottom: 30px;
+}
+.cao{
+	margin-bottom:20px;
+}
