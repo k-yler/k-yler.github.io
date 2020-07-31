@@ -1,89 +1,145 @@
-.intro {
-	width: 100%;
-	height: 100vh;
-	background: url("../img/01.jpg") center no-repeat;
-	background-size: cover;
+/* Color */
+/* body setings */
+html {
+  font-size: 10px;
 }
-.text-intro {
-	font-size: 18px;
-
+section {
+  padding: 10rem 0;
+}
+a:hover {
+  text-decoration: none;
+}
+input:focus,
+button:focus,
+a:focus {
+  outline: none;
+}
+.button {
+  background-color: #fcb303;
+  color: white;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  border-radius: 8px;
+  border: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.button:hover {
+  cursor: pointer;
+  background-color: #e3a103;
+}
+.main {
+  padding: 3rem 0;
+  background: #ffffff url(../img/holmy_gory_tuman_180031_1920x1200.jpg) center center no-repeat;
+  background-size: cover;
+}
+.main-inf {
+  padding-top: 10rem;
+}
+.main-inf h1 {
+  font-size: 4rem;
+  padding-bottom: 3rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.main-inf p {
+  font-size: 2rem;
+}
+.main-inf span {
+  margin: 3rem 0;
+  text-align: center;
+  display: inline-block;
+  padding: 2rem 4rem;
+  font-size: 2rem;
+  background-color: #46b814;
+  color: white;
+}
+.main-inf span strong {
+  font-size: 4rem;
+}
+.main-inf strong {
+  font-size: 2.3rem;
+}
+.main-form {
+  margin-top: 10rem;
+  text-align: center;
+  padding: 4rem;
+  background-color: white;
+}
+.main-form-header {
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}
+.main-form-input {
+  margin: 2rem 0;
+  display: block;
+  width: 100%;
+  height: 5rem;
+  border: 1px solid #dddddd;
+}
+.main-form-label {
+  padding: 0 0.5rem ;
+  background-color: white;
+  position: absolute;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+}
+.main-form-btn {
+  margin: 2rem 0 1rem 0;
+  display: block;
+  width: 100%;
+  height: 5rem;
 }
 .header {
-	margin-top: 30px;
-	color:black;
+  height: 7rem;
 }
-.text-text {
-	margin-top: 130px;
-	color: white ;
-	font-size: 40px;
+.phone-link {
+  display: inline-block;
+  color: #000000;
+  font-weight: 900;
+  font-size: 1.5rem;
+  height: 7rem;
+  line-height: 7rem;
 }
-.text-text-2 {
-	margin-top: 30px;
-	font-size: 18px;
-	color: white ;
+.wrap {
+  /* text-align: left; */
+  display: table;
+  width: 100%;
+  height: 7rem;
 }
-.logo-btn {
-	margin-top: 75px;
-	margin-bottom: 60px;
-	background-color: rgba(0, 0, 0, 0);
-	border: 2px solid white;
-	color: white;
+.wrap-block {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: right;
 }
-.head-text {
-	font-size: 35px;
+.qqq {
+  border: 1px solid red;
 }
-.head2{
-	margin-top: 80px;
+@media (max-width: 991px) {
+  .main {
+    background-position: top right;
+  }
+  .phone-block {
+    /* text-align: center; */
+  }
+  .main-inf {
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 0;
+  }
+  .main-form {
+    margin-top: 4rem;
+  }
 }
-.pic-1 {
-	width: 100%;
-	height: 33vh;
-	background: url("../img/bus.jpg") center no-repeat;
-	background-size: cover;
-}
-.pic-2 {
-	width: 100%;
-	height: 33vh;
-	background: url("../img/hz.jpg") center no-repeat;
-	background-size: cover;
-}
-.pic-3 {
-	width: 100%;
-	height: 33vh;
-	background: url("../img/train.jpg") center no-repeat;
-	background-size: cover;
-}
-.tnp {
-	padding-top: 20%;
-	color: white;
-	font-size: 30px;
-}
-.pic-1, .pic-2, .pic-3 {
-	margin-top: 50px;
-}
-.tpp {
-	margin-top: 20px;
-
-}
-.head-text2 {
-	margin-top: 60px;
-	font-size: 35px;
-}
-/*.box {
-	border:1px solid red;
-	height: 100px;
-}*/
-.ppp {
-	font-size: 15px;
-}
-.last {
-	margin-top: 50px;
-	margin-bottom:60px;
-}
-.tee {
-	margin: 0;
-	margin-bottom: 30px;
-}
-.cao{
-	margin-bottom:20px;
+@media (max-width: 767px) {
+  .main {
+    background-position: top left;
+  }
+  .header {
+    text-align: center;
+  }
+  .wrap-block {
+    text-align: center;
+  }
 }
