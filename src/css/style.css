@@ -113,15 +113,34 @@ a:focus {
   vertical-align: middle;
   text-align: right;
 }
-.qqq {
-  border: 1px solid red;
+.section-header {
+  text-align: center;
+  margin: 2rem 0 10rem;
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+.ficha-block {
+  text-align: center;
+}
+.ficha-block img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
+.ficha h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.ficha p {
+  font-size: 1.6rem;
+}
+.slick-active {
+  outline: none;
 }
 @media (max-width: 991px) {
   .main {
     background-position: top right;
-  }
-  .phone-block {
-    /* text-align: center; */
   }
   .main-inf {
     text-align: center;
