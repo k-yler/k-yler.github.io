@@ -30,7 +30,7 @@
 
 						<div class="col-md-3 col-sm-4 col-xs-12">
 							<div class="logo">
-							<img src="img/noname1.png"  width="25%" alt="">
+							<img src="img/logo.png"  width="25%" alt="">
 							</div>
 						</div>
 						
@@ -102,12 +102,12 @@
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum enim sed, ab eum porro, aspernatur.</p>
 			</div>
 			<div class="ficha-block">
-				<ficha-img><img src="img/noname1.png"  width="25%" alt=""></ficha-img>
+				<ficha-img><img src="img/noname3.png"  width="25%" alt=""></ficha-img>
 				<h3>Lorem ipsum dolor.</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi ducimus odit ad quos libero fugiat!</p>
 			</div>
 			<div class="ficha-block">
-				<ficha-img><img src="img/noname2.png"  width="25%" alt=""></ficha-img>
+				<ficha-img><img src="img/noname4.png"  width="25%" alt=""></ficha-img>
 				<h3>Lorem ipsum dolor.</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum enim sed, ab eum porro, aspernatur.</p>
 			</div>
@@ -130,6 +130,7 @@
     	$(document).ready(function(){
   		$('.ficha-slider').slick({
    		infinite: true,
+   		dots: true,
   		slidesToShow: 4,
   		slidesToScroll: 1,
   		responsive: [
@@ -137,6 +138,8 @@
   		      breakpoint: 991,
   		      settings: {
   		        slidesToShow: 2,
+  		        prevArrow: '<button class="prev-arrow"></button>',
+  		        nextArrow: '<button class="next-arrow"></button>',
   		        slidesToScroll: 2
   		      }
   		    },
@@ -144,6 +147,8 @@
   		      breakpoint: 767,
   		      settings: {
   		        slidesToShow: 1,
+  		        prevArrow: '<button class="prev-arrow"></button>',
+  		        nextArrow: '<button class="next-arrow"></button>',
   		        slidesToScroll: 1
   		      }
   		    }

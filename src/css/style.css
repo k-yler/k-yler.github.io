@@ -127,6 +127,9 @@ a:focus {
   margin: 0 auto;
   margin-bottom: 4rem;
 }
+.ficha p {
+  padding: 0 1.5rem;
+}
 .ficha h3 {
   font-size: 2rem;
   font-weight: 700;
@@ -137,6 +140,30 @@ a:focus {
 }
 .slick-active {
   outline: none;
+}
+.prev-arrow {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  border: none;
+  background: url(../img/arrow-left.png) center no-repeat;
+  left: 0%;
+  top: 50%;
+  -webkit-transform: scale(-50%);
+          transform: scale(-50%);
+  z-index: 99;
+}
+.next-arrow {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  border: none;
+  background: url(../img/arrow-right.png) center no-repeat;
+  right: 0%;
+  top: 50%;
+  -webkit-transform: scale(-50%);
+          transform: scale(-50%);
+  z-index: 99;
 }
 @media (max-width: 991px) {
   .main {
