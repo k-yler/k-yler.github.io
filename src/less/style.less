@@ -16,13 +16,14 @@ section{
 a:hover {
 	text-decoration: none;
 }
-button, input, a {
+input, button, a, textarea{
 	&:focus {
 		outline: none;
 	}
 }
 
 .button {
+	z-index: 5;
 	background-color: @btn-color;
 	color: white;
 	padding: 1rem 3rem;
@@ -30,9 +31,9 @@ button, input, a {
 	text-transform: uppercase;
 	border-radius:8px;
 	border: none;
-
-	transition: .4s;
+	transition: all 0.2s;
 	&:hover {
+		cursor: pointer;
 		background-color: darken(@btn-color, 5%);
 	}
 }
@@ -40,68 +41,76 @@ button, input, a {
 	padding: 3rem 0;
 	background: #fff url(../img/holmy_gory_tuman_180031_1920x1200.jpg) center center no-repeat;
 	background-size: cover;
-	&-content {
-		margin-top: 10rem;
+	
+	&-inf{
+		padding-top:10rem;
 		h1 {
-			margin-bottom: 4rem;
-			font-weight: 700;
 			font-size: 4rem;
+			padding-bottom: 3rem;
 			text-transform: uppercase;
+			font-weight: 700;
 		}
-	}
-	&-subtitle {
-		margin-bottom: 4rem;
-		font-size: 2rem;
-	}
-	span {
-		display: inline-block;
-		padding: 2rem 4rem;
-		background-color: @icon-color;
-		font-size: 1.8rem;
-		color: white;
-		text-align: center;
+		p {
+			font-size: 2rem;
+		}
+		span {
+			margin: 3rem 0;
+			text-align: center;
+			display: inline-block;
+			padding: 2rem 4rem;
+			font-size: 2rem;
+			background-color: @icon-color;
+			color: white;
+			strong {
+				font-size: 4rem;
+			}
+		}
 		strong {
-			font-size: 3rem;
+			font-size: 2.3rem;
 		}
-		}
-	&-trigger {
-		margin-top: 3rem;
-		display: block;
-		font-size: 2.2rem;
-		text-transform: uppercase;
-		font-weight: 700;
+
 	}
+
 	&-form {
-		background-color: white;
-		padding: 4rem 5rem;
+		margin-top: 10rem;
 		text-align: center;
+		padding: 4rem;
+		background-color: white;
+
 		&-header {
-			font-size: 1.8rem;
-			margin-bottom: 4rem;
+
+			font-size: 2rem;
+			padding-bottom: 2rem;
 		}
 		&-input {
-			display: block;
 			margin: 2rem 0;
-			width: 100%;
-			border: 1px solid #dddddd;
-			height: 4.5rem;
-		}
-		label {
-			position: absolute;
-			display: inline-block;
-			left: 50%;
-			transform: translateX(-50%) translateY(-50%);
-			font-size: 1.3rem;
-			padding: 0.5rem;
-			background-color: white;
-		}
-		&-btn {
 			display: block;
 			width: 100%;
-			height: 4.5rem;
+			height: 5rem;
+			border:1px solid #dddddd;
+			border-radius: 7px;
 		}
+		&-label {
+			padding: 0 0.5rem ;
+			background-color: white;
+
+			position: absolute;
+			transform: translateX(-50%) translateY(-50%);
+			
+		}
+
+		&-btn{
+			margin: 2rem 0 1rem 0;
+			display: block;
+			width: 100%;
+			height: 5rem;
+		}
+
+
 	}
+
 }
+
 .header {
 	height: 7rem;
 }
@@ -114,6 +123,7 @@ button, input, a {
 	line-height: 7rem;
 }
 .wrap {
+	/* text-align: left; */
 	display: table;
 	width: 100%;
 	height: 7rem;
@@ -121,8 +131,15 @@ button, input, a {
 	&-block {
 		display: table-cell;
 		vertical-align: middle;
-		text-align: center;
+		text-align: right;
 	}
+}
+
+.section-header {
+	text-align: center;
+	margin: 2rem 0 10rem;
+	font-size: 3.5rem;
+	font-weight: 700;
 }
 
 .ficha {
@@ -172,8 +189,6 @@ button, input, a {
 	z-index: 99;
 }
 
-
-
 /* оформнелие модальных окон */
 .popup {
 	display: none;
@@ -188,13 +203,14 @@ button, input, a {
 	background-color: rgba(0, 0, 0, 0.7);
 	&-close{
 		position: absolute;
-		top: -9px;
-		right: 0px;
+		top: 0;
+		top: -1.5rem;
+		right: -3rem;
 		text-align: center;
 		border: none;
 		background-color: transparent;
 		font-size: 3rem;
-		color: black;
+		color: white;
 	}
 	&-header {
 		font-size: 3rem;
@@ -202,11 +218,11 @@ button, input, a {
 	}
 	&-content{
 		position: fixed;
-	left: 50%;
-	transform: translateX(-50%);
-	padding: 2rem;
-	top: 10%;
-	background-color: white;
+left: 50%;
+transform: translateX(-50%);
+padding: 2rem;
+top: 10%;
+background-color: white;
 		text-align: center;
 		p {
 			font-size: 1.5rem;
@@ -247,40 +263,36 @@ button, input, a {
 
 
 
-
-
-
-
-
-
-
-
-
 @media (max-width: 991px) {
-	.main-title{
+	.main {
+		background-position: top right;
+	}
+	.main-inf{
 		text-align: center;
-		padding-bottom: 4rem;
+		padding-top: 4rem;
+		padding-bottom:0;
 	}
-	.header {
-		text-align: center;	
-	}
-	.main-content{
-		margin-top: 5rem;
+	.main-form{
+		margin-top: 4rem;
 	}
 }
-
 @media (max-width: 767px) {
+	.main {
+		background-position: top left;
+	}
 	.header{
 		text-align: center;
 	}
-
-	.main-title{
+	.header-btn{
+		position: absolute;
+		display: block;
+		z-index: 9;
 		text-align: center;
-		padding-top: 2rem;
-		padding-bottom: 4rem;
 	}
-	.main-subtitle{
-		margin-top: 5rem;
+	.main-inf{
+		padding-top: 22rem;
 	}
-	/* .main-content */
+	.wrap-block{
+		padding-right: 20%;
+	}
 }
