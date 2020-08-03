@@ -1,0 +1,256 @@
+/* Color */
+/* body setings */
+html {
+  font-size: 10px;
+}
+section {
+  padding: 10rem 0;
+}
+a:hover {
+  text-decoration: none;
+}
+button:focus,
+input:focus,
+a:focus {
+  outline: none;
+}
+.button {
+  background-color: #fcb303;
+  color: white;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  border-radius: 8px;
+  border: none;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.button:hover {
+  background-color: #e3a103;
+}
+.main {
+  padding: 3rem 0;
+  background: #ffffff url(../img/holmy_gory_tuman_180031_1920x1200.jpg) center center no-repeat;
+  background-size: cover;
+}
+.main-content {
+  margin-top: 10rem;
+}
+.main-content h1 {
+  margin-bottom: 4rem;
+  font-weight: 700;
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+.main-subtitle {
+  margin-bottom: 4rem;
+  font-size: 2rem;
+}
+.main span {
+  display: inline-block;
+  padding: 2rem 4rem;
+  background-color: #46b814;
+  font-size: 1.8rem;
+  color: white;
+  text-align: center;
+}
+.main span strong {
+  font-size: 3rem;
+}
+.main-trigger {
+  margin-top: 3rem;
+  display: block;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.main-form {
+  background-color: white;
+  padding: 4rem 5rem;
+  text-align: center;
+}
+.main-form-header {
+  font-size: 1.8rem;
+  margin-bottom: 4rem;
+}
+.main-form-input {
+  display: block;
+  margin: 2rem 0;
+  width: 100%;
+  border: 1px solid #dddddd;
+  height: 4.5rem;
+}
+.main-form label {
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  font-size: 1.3rem;
+  padding: 0.5rem;
+  background-color: white;
+}
+.main-form-btn {
+  display: block;
+  width: 100%;
+  height: 4.5rem;
+}
+.header {
+  height: 7rem;
+}
+.phone-link {
+  display: inline-block;
+  color: #000000;
+  font-weight: 900;
+  font-size: 1.5rem;
+  height: 7rem;
+  line-height: 7rem;
+}
+.wrap {
+  display: table;
+  width: 100%;
+  height: 7rem;
+}
+.wrap-block {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.ficha-block {
+  text-align: center;
+}
+.ficha-block img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
+.ficha p {
+  padding: 0 1.5rem;
+}
+.ficha h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.ficha p {
+  font-size: 1.6rem;
+}
+.slick-active {
+  outline: none;
+}
+.prev-arrow {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  border: none;
+  background: url(../img/arrow-left.png) center no-repeat;
+  left: 0%;
+  top: 50%;
+  -webkit-transform: scale(-50%);
+          transform: scale(-50%);
+  z-index: 99;
+}
+.next-arrow {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  border: none;
+  background: url(../img/arrow-right.png) center no-repeat;
+  right: 0%;
+  top: 50%;
+  -webkit-transform: scale(-50%);
+          transform: scale(-50%);
+  z-index: 99;
+}
+/* оформнелие модальных окон */
+.popup {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.popup-close {
+  position: absolute;
+  top: -9px;
+  right: 0px;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  font-size: 3rem;
+  color: black;
+}
+.popup-header {
+  font-size: 3rem;
+}
+.popup-content {
+  position: fixed;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 2rem;
+  top: 10%;
+  background-color: white;
+  text-align: center;
+}
+.popup-content p {
+  font-size: 1.5rem;
+}
+.popup-form {
+  width: 35rem;
+  padding: 2rem;
+}
+.popup-form-area {
+  height: 10rem;
+  margin: 2rem 0;
+  display: block;
+  width: 100%;
+  border: 1px solid #dddddd;
+  border-radius: 7px;
+}
+.popup-form-input {
+  margin: 2rem 0;
+  display: block;
+  width: 100%;
+  height: 5rem;
+  border: 1px solid #dddddd;
+  border-radius: 7px;
+}
+.popup-form-label {
+  padding: 0 0.5rem ;
+  background-color: white;
+  position: absolute;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+}
+@media (max-width: 991px) {
+  .main-title {
+    text-align: center;
+    padding-bottom: 4rem;
+  }
+  .header {
+    text-align: center;
+  }
+  .main-content {
+    margin-top: 5rem;
+  }
+}
+@media (max-width: 767px) {
+  .header {
+    text-align: center;
+  }
+  .main-title {
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+  }
+  .main-subtitle {
+    margin-top: 5rem;
+  }
+  /* .main-content */
+}
