@@ -125,6 +125,18 @@ textarea:focus {
   margin-top: 0;
   margin-bottom: 10rem;
 }
+.section-header_light {
+  color: white;
+  margin-bottom: 7rem;
+}
+.section-header_light h2 {
+  font-weight: 700;
+}
+.section-header_light p {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-top: 2rem;
+}
 .ficha-block {
   text-align: center;
 }
@@ -170,6 +182,60 @@ textarea:focus {
   -webkit-transform: scale(-50%);
           transform: scale(-50%);
   z-index: 99;
+}
+/* оформление блока с ценами */
+.price {
+  background: #46b814;
+}
+.price-btn {
+  margin-top: 2rem;
+}
+.price-block {
+  min-height: 45.7rem;
+  padding: 2rem 3rem 4rem;
+  background-color: white;
+  -webkit-box-shadow: 7px 12px 21px 0px rgba(0, 0, 0, 0.17);
+          box-shadow: 7px 12px 21px 0px rgba(0, 0, 0, 0.17);
+  text-align: center;
+}
+.price-block h4 {
+  margin: 2rem 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.price-list {
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  list-style: none;
+  padding: 0;
+  min-height: 12.5rem;
+}
+.price-list li:before {
+  content: '';
+  margin-right: 1rem;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: url(../img/arrow-left.png) no-repeat center;
+  background-size: 100%;
+  vertical-align: middle;
+}
+.price-tag {
+  font-size: 2rem;
+  display: inline-block;
+  margin: 1.5rem 0;
+}
+.price-btn {
+  width: 90%;
+  height: 4.5rem;
+}
+.price-button {
+  margin-top: 3rem;
+  width: 90%;
+  height: 4.5rem;
+}
+.warp2 {
+  text-align: right;
 }
 /* оформнелие модальных окон */
 .popup {
@@ -247,6 +313,21 @@ textarea:focus {
   }
   .main-content {
     margin-top: 5rem;
+  }
+  .warp2 {
+    text-align: center;
+  }
+  .price-block {
+    margin-bottom: 3rem;
+  }
+  .price-button {
+    width: 65%;
+    margin: 0 0 5rem 0;
+    padding: 0;
+  }
+  .section-header_light {
+    margin: 0;
+    padding: 0 0 4rem 0;
   }
 }
 @media (max-width: 767px) {
