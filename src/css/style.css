@@ -238,6 +238,72 @@ textarea:focus {
 .warp2 {
   text-align: right;
 }
+.feedback {
+  background: #ccc;
+}
+.feedback-text {
+  margin-top: 2rem;
+  margin-right: 2px;
+  padding: 1rem;
+  border: 3px solid #46b814;
+  font-style: italic;
+  position: relative;
+}
+.feedback-text:before {
+  left: 4rem;
+  content: '';
+  display: block;
+  position: absolute;
+  top: -2rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: white;
+  border: 3px solid #46b814;
+  border-bottom: none;
+  border-top-right-radius: 100px;
+}
+.feedback .media-object {
+  width: 50px;
+}
+.feedback-prev-btn {
+  left: -4rem;
+}
+.feedback-next-btn {
+  right: -4rem;
+}
+.feedback-slider {
+  padding: 5rem 6rem;
+  background-color: #ffffff;
+  -webkit-box-shadow: 6px 10px 18px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 6px 10px 18px 0px rgba(0, 0, 0, 0.2);
+}
+.feedback-slider .media {
+  margin-top: 3rem;
+  font-size: 1.5rem;
+}
+.feedback-slider .media h4 {
+  font-weight: 700;
+}
+.feedback-slider p {
+  font-size: 1.7rem;
+}
+.feedback-slider-btn {
+  position: absolute;
+  /* z-index: 99; */
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 4rem;
+  height: 5rem;
+  background-color: #46b814;
+  border: none;
+}
+.feedback-slider-btn img {
+  width: 100%;
+}
+.photo-slider-item img {
+  width: 100%;
+}
 /* оформнелие модальных окон */
 .popup {
   display: none;
