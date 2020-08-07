@@ -241,6 +241,33 @@ textarea:focus {
 .feedback {
   background: #ccc;
 }
+.feedback-form {
+  text-align: center;
+  background-color: white;
+  margin-top: 7rem;
+  padding: 4rem;
+}
+.feedback-form-header {
+  margin-bottom: 2.5rem;
+}
+.feedback-form-input {
+  display: block;
+  margin: 2rem 0;
+  width: 100%;
+  border: 1px solid #dddddd;
+  height: 4.5rem;
+  border-radius: 7px;
+}
+.feedback-form label {
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(20%);
+          transform: translateX(-50%) translateY(20%);
+  font-size: 1.3rem;
+  padding: 0.5rem;
+  background-color: white;
+}
 .feedback-text {
   margin-top: 2rem;
   margin-right: 2px;
@@ -396,6 +423,21 @@ textarea:focus {
     margin: 0;
     padding: 0 0 4rem 0;
   }
+  .fotorama {
+    padding-bottom: 2rem;
+  }
+  .feedback-form label {
+    -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+  }
+}
+@media (max-width: 799px) {
+  .feedback-prev-btn {
+    left: 0rem;
+  }
+  .feedback-next-btn {
+    right: 0rem;
+  }
 }
 @media (max-width: 767px) {
   .header {
@@ -414,5 +456,12 @@ textarea:focus {
 @media (max-width: 374px) {
   .popup-close {
     right: 20px;
+  }
+  .hzhz {
+    padding: 2rem;
+  }
+  .feedback-form label {
+    padding: 1px;
+    /* margin: 0; */
   }
 }
