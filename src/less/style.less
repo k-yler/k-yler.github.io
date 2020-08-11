@@ -344,8 +344,63 @@ button, input, a, textarea {
 }
 
 
+.scheme{
+	&-row{
+		margin-top: 3rem;
+	}
+	&-header{
+		p{
+			font-size: 1.9rem;
+			margin-bottom: 4rem;
+		}
+	}
+	h3{
+		font-size: 2.2rem;
+		font-weight: 700;
+	}
+}
+.sw{
+	height: 30rem;
+}
 
+.all{
+	background-color: #ccc;
+	padding: 5rem 0;
+	.scheme-header{
+		padding-bottom: 5rem;
+		text-align: center;
+	}
+	.media{
 
+		min-height: 10rem; 
+		h4{
+			font-weight: 700;
+			font-size: 1.8rem;
+		}
+		font-size: 1.4rem;
+	}
+}
+
+.circle{
+	background-color: @icon-color;
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	border-radius:50%;
+	&-border{
+		padding: 0.3rem;
+		display: inline-block;
+		width: 5rem;
+		height: 5rem;
+		border: 2px solid @icon-color;
+		border-radius: 50%;
+		text-align: center;
+		line-height: 4rem;
+		color: white;
+		font-weight: 900;
+		font-size: 1.6rem;
+	}
+}
 
 
 
@@ -431,7 +486,13 @@ button, input, a, textarea {
 
 
 
-
+@media (max-width: 1199px){
+	.all{
+		.media{
+			min-height: 12rem;
+		}
+	}
+}
 
 @media (max-width: 991px) {
 	.main-title{
@@ -471,6 +532,9 @@ button, input, a, textarea {
 			}
 		}
 	}
+	.sw{
+		height: 33rem;
+	}
 }
 @media (max-width: 799px){
 	.feedback{
@@ -496,8 +560,22 @@ button, input, a, textarea {
 	.main-subtitle{
 		margin-top: 5rem;
 	}
-	/* .main-content */
+	.sw{
+		text-align: center;
+		img{
+			width: 30%;
+		}
+	}
+	
 }
+@media(max-width: 585px){
+	.sw{
+		img{
+			width: 40%;
+		}
+	}
+}
+
 @media (max-width: 374px){
 	.popup {
 		&-close {
@@ -515,4 +593,5 @@ button, input, a, textarea {
 			}
 		}
 	}
+	
 }
