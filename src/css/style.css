@@ -331,6 +331,16 @@ textarea:focus {
 .photo-slider-item img {
   width: 100%;
 }
+.scheme {
+  position: relative;
+}
+.scheme-misha {
+  position: absolute;
+  width: 40rem;
+  bottom: 0;
+  right: 0;
+  margin-right: 20rem;
+}
 .scheme-row {
   margin-top: 3rem;
 }
@@ -380,6 +390,64 @@ textarea:focus {
   color: white;
   font-weight: 900;
   font-size: 1.6rem;
+}
+.problem {
+  position: relative;
+}
+.problem-misha {
+  position: absolute;
+  bottom: 5rem;
+  width: 40rem;
+  left: 50%;
+  margin-left: -20rem;
+}
+.problem-header {
+  text-align: center;
+  margin-bottom: 7rem;
+}
+.problem-list {
+  margin-bottom: 2rem;
+  border: 2px solid;
+  padding: 2rem;
+  min-height: 26rem;
+}
+.problem-list h4 {
+  font-size: 2.1rem;
+}
+.problem-list ul {
+  list-style: none;
+  padding-top: 2rem;
+  padding-left: 0;
+}
+.problem-list ul li {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-left: 4rem;
+}
+.problem-list ul li:before {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+  content: '';
+  width: 3rem;
+  height: 3rem;
+}
+.problem-list-bad {
+  border-color: #ccc;
+}
+.problem-list-bad h4 {
+  opacity: .5;
+}
+.problem-list-bad ul li:before {
+  background: url(../img/closed.png) center no-repeat;
+}
+.problem-list-good {
+  border-color: #46b814;
+}
+.problem-list-good ul li:before {
+  background: url(../img/cheked.png) center no-repeat;
 }
 /* оформнелие модальных окон */
 .popup {
@@ -451,6 +519,15 @@ textarea:focus {
   .all .media {
     min-height: 12rem;
   }
+  .problem-list {
+    min-height: 39rem;
+  }
+  .problem-misha {
+    display: none;
+  }
+  .scheme-misha {
+    display: none;
+  }
 }
 @media (max-width: 991px) {
   .main-title {
@@ -487,6 +564,9 @@ textarea:focus {
   }
   .sw {
     height: 33rem;
+  }
+  .problem-list {
+    min-height: auto;
   }
 }
 @media (max-width: 799px) {
