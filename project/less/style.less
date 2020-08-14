@@ -1,0 +1,117 @@
+@orange: #FF8900;
+html {
+	width: 100%;
+}
+a{
+	text-decoration: none;
+	&:hover{
+		text-decoration: none;
+	}
+}
+.navibar{
+	/* position: sticky; */
+	/* top: 0; */
+	position: fixed;
+	left: 0;
+	right: 0;
+	border-bottom: 2px solid #ccc;
+	padding: 10px 0;
+	.hz{
+		font-size: 20px;
+	}
+	a{
+		color: black;
+		text-transform: uppercase;
+	
+	}
+	&-link{
+		line-height: 30px;
+		margin-left: 50px;
+	}
+	&-right{
+		text-align: right;
+	}
+}
+
+// главный экран
+
+.mainn {
+	/* height: 100vh; */
+	padding: 50px 0;
+	color: white;
+	background: url(../img/header.jpg) center center no-repeat;
+	background-size: cover;
+	text-align: center;
+	&-otstup{
+		margin-top: 150px;
+	}
+	.header{
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 32px;
+	}
+	.header-p{
+		font-size: 18px;
+	}
+	.palka{
+		display: inline-block;
+		width: 70px;
+		height: 1px;
+		border: 1px solid @orange;
+		margin-bottom: 30px;
+		margin-top: 25px;
+	}
+	p{
+		font-size: 24px;
+		opacity: .5;
+		font-weight: 500;
+		margin-bottom: 50px;
+	}
+	.button{
+		/* display: block; */
+		border: none;
+		border-radius: 100px;
+		text-transform: uppercase;
+		font-weight: 900;
+		padding: 15px 30px;
+		background-color: @orange;
+		transition: .3s;
+		&:hover{
+			background: darken(@orange, 5%);
+		}
+	}
+}
+
+
+
+
+
+@media (max-width: 991px) {
+	.button{
+		margin-bottom: 50px;
+	}
+	.mainn{
+		&-otstup{
+			margin-top: 50px;
+		}
+	}
+
+}
+
+@media (max-width: 767px) {
+	.navibar{
+		background-color: white;
+		border: 1px solid black;
+		&-right{
+			display: none;
+		}
+		&-link{
+			display: none;
+		}
+	}
+	.mainn{
+		&-otstup{
+			margin-top: 0;
+		}
+	}
+}
