@@ -1,32 +1,68 @@
 @orange: #FF8900;
-html {
-	width: 100%;
+h1, h2, h3, h4, h5, h6{
+	margin: 0;
 }
+section{
+	padding: 80px 0;
+}
+.button{
+	/* display: block; */
+	border: none;
+	border-radius: 100px;
+	text-transform: uppercase;
+	font-weight: 900;
+	padding: 15px 30px;
+	background-color: @orange;
+	transition: .3s;
+	&:hover{
+		/* background: darken(color, 5%); */
+		filter: brightness(90%);
+	}
+		}
+.header-h1{
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 40px;
+	}
+.palka{
+	display: inline-block;
+	width: 70px;
+	height: 1px;
+	border: 2px solid @orange;
+	margin-bottom: 30px;
+	margin-top: 25px;
+	}
+
+
+
 a{
+	font-weight: 700;
 	text-decoration: none;
 	&:hover{
 		text-decoration: none;
 	}
 }
 .navibar{
+
 	/* position: sticky; */
+	/* z-index: 111; */
 	/* top: 0; */
-	position: fixed;
-	left: 0;
-	right: 0;
+	/* position: fixed; */
+	/* left: 0; */
+	/* right: 0; */
 	border-bottom: 2px solid #ccc;
 	padding: 10px 0;
 	.hz{
 		font-size: 20px;
 	}
 	a{
-		color: black;
+		color: #ccc	;
 		text-transform: uppercase;
 	
 	}
 	&-link{
 		line-height: 30px;
-		margin-left: 50px;
+		margin-left: 35px;
 	}
 	&-right{
 		text-align: right;
@@ -34,32 +70,25 @@ a{
 }
 
 // главный экран
-
+.hz	{
+	padding: 0;
+	margin: 0;
+}
 .mainn {
 	height: 100vh;
-	padding: 50px 0;
 	color: white;
 	background: url(../img/header.jpg) center center no-repeat;
 	background-size: cover;
 	text-align: center;
 	&-otstup{
-		margin-top: 150px;
+		 // margin-top: 100px;
+		 top: 50%;
+		 position: absolute;
+		 transform: translateY(-50%); 
 	}
-	.header{
-		text-transform: uppercase;
-		font-weight: 700;
-		font-size: 32px;
-	}
+	
 	.header-p{
 		font-size: 18px;
-	}
-	.palka{
-		display: inline-block;
-		width: 70px;
-		height: 1px;
-		border: 1px solid @orange;
-		margin-bottom: 30px;
-		margin-top: 25px;
 	}
 	p{
 		font-size: 24px;
@@ -67,32 +96,80 @@ a{
 		font-weight: 500;
 		margin-bottom: 50px;
 	}
-	.button{
-		/* display: block; */
-		border: none;
-		border-radius: 100px;
-		text-transform: uppercase;
-		font-weight: 900;
-		padding: 15px 30px;
-		background-color: @orange;
-		transition: .3s;
-		&:hover{
-			background: darken(@orange, 5%);
-		}
+	
+}
+.button-rev{
+	color: black;
+	background-color: white;
+}
+.two{
+	background: @orange;
+	text-align: center;
+	color: white;
+	p{
+		font-size: 17px;
+		opacity: .5;
+		font-weight: 500;
+		margin-bottom: 20px;
+	}
+	.palka{
+		border-color: white;
+		margin: 12px 0 18px;
 	}
 }
 
+// второй блок сервисы с иконками
+.service{
+	text-align: center;
+	.palka{
+		margin: 12px 0 18px;
+	}
+	img{
+		width: 65px;
+	}
+	h3{
+		margin: 10px 0;
+	}
+	p{
+		font-size: 17px;
+		opacity: 0.7;
+	}
+}
 
+.photo{
+	padding: 0;
+	margin: 0;
+	.container{
+		padding: 0;
+		// margin: 0;
+	}
+	.pad{
+		padding: 0;
+	}
+	img{
+		padding: 0;
+		margin: 0;
+		width: 100%;
+		position: relative;
+		left: -2px;
+		transition: 1s;
+		&:hover{
+			background-color: red;
+			z-index: 1000;
+		}
 
-
+	}
+}
 
 @media (max-width: 991px) {
-	.button{
-		margin-bottom: 50px;
-	}
 	.mainn{
 		&-otstup{
 			margin-top: 50px;
+		}
+	}
+	.service{
+		&-box{
+			margin-bottom: 50px;
 		}
 	}
 
@@ -110,8 +187,14 @@ a{
 		}
 	}
 	.mainn{
+		height: 110vh;
 		&-otstup{
 			margin-top: 0;
+		}
+	}
+	.service{
+		&-box{
+			margin-bottom: 50px;
 		}
 	}
 }
