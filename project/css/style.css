@@ -25,6 +25,10 @@ section {
   -webkit-filter: brightness(90%);
           filter: brightness(90%);
 }
+.button-black {
+  color: black;
+  background-color: white;
+}
 .header-h1 {
   text-transform: uppercase;
   font-weight: 700;
@@ -112,13 +116,13 @@ a:hover {
 }
 .two .palka {
   border-color: white;
-  margin: 12px 0 18px;
+  margin: 20px 0 18px;
 }
 .service {
   text-align: center;
 }
 .service .palka {
-  margin: 12px 0 18px;
+  margin: 18px 0 13px;
 }
 .service img {
   width: 65px;
@@ -130,27 +134,43 @@ a:hover {
   font-size: 17px;
   opacity: 0.7;
 }
-.photo {
-  padding: 0;
-  margin: 0;
-}
-.photo .container {
-  padding: 0;
-}
-.photo .pad {
-  padding: 0;
-}
 .photo img {
-  padding: 0;
-  margin: 0;
   width: 100%;
-  position: relative;
+  margin-bottom: 10px;
   -webkit-transition: 1s;
   transition: 1s;
 }
-.photo img:hover {
-  background-color: red;
-  z-index: 1000;
+.down {
+  padding: 40px 0;
+  text-align: center;
+  color: white;
+  background-color: black;
+}
+.down h2 {
+  margin-bottom: 20px;
+}
+.contact {
+  text-align: center;
+}
+.contact-box {
+  padding-top: 20px;
+}
+.contact-box p {
+  line-height: 40px;
+}
+.contact p {
+  font-size: 17.5px;
+  font-weight: 500;
+}
+.contact a {
+  text-decoration: none;
+  color: #ff8900;
+  display: block;
+  font-size: 20px;
+}
+.contact img {
+  width: 50px;
+  padding: 0 0 10px;
 }
 @media (max-width: 991px) {
   .mainn-otstup {
