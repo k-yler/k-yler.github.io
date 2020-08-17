@@ -1,0 +1,228 @@
+@blue: #80b7b3;
+@form: #394d53;
+@input: #2b3b40;
+
+p{
+	padding: 0;
+	margin: 0;
+}
+
+.travel{
+	text-transform: uppercase;
+	font-size: 12px;
+	color: #969da0;
+}
+
+.main{
+	background: white url(../img/light-grey-terrazzo.png) center no-repeat;
+	// background: #ccc;
+	background-size: cover;
+
+	position: relative;
+	
+	.nadpis{
+		position: absolute;
+		text-align: center;
+		left: 50%;
+		transform: translateX(-50%);
+		
+		.story{
+			position: relative;
+			p{
+				font-size: 200px;
+				line-height: 1;
+				color: #ccc;
+				opacity: .5;
+			}
+		}
+		.marcy{
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 99;
+			background: @blue;
+			padding: 20px 40px 10px 40px;
+			box-shadow: 0px 5px 10px #e0e0e0;
+			p{
+				color: white;
+				font-size: 40px;
+				// background: @blue;
+				// padding: 20px 40px 10px 40px;
+			}
+		}
+	}
+	.content{
+		margin-top: 250px;
+		// position: relative;
+		.img2{
+			// display: inline-block;
+			vertical-align: middle;
+			margin-top: 100px;
+			img{
+				position: absolute;
+				width: 300px;
+			}
+		}
+		.img{
+			// position: absolute;
+			// left: 0%;
+			// width: 100%;
+			// height: 100px;
+			img{
+				padding-right: 0;
+				position: absolute;
+				max-height: 450px;
+
+				right: 0%;
+			}
+		}
+	}
+}
+img{
+	// position: absolute;
+	padding: 10px;
+	background: white;
+}
+.header{
+	margin-bottom: 50px;
+	font-size: 30px;
+}
+.text{
+	margin-bottom: 30px;
+	font-size: 20px;
+	font-style: italic;
+}
+.button{
+	background-color: @blue;
+	border: none;
+	text-transform: uppercase;
+	color: white;
+	padding: 10px 30px;
+	border-radius: 100px;
+	line-height: 1.5;
+	span:after{
+			content: '';
+			// margin-right: 1rem;
+			// margin-bottom: 0.5rem;
+			margin-left: 20px;
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			background: url(../img/arrow.png) no-repeat center;
+			background-size: 100%;
+			vertical-align: middle; 
+	}
+}
+
+section{
+	padding: 100px 0;
+}
+.two{
+	background: white url(../img/light-grey-terrazzo.png) center no-repeat;
+	background-size: cover;
+	text-align: center;
+	img{
+		margin-bottom: 50px;
+	}
+	.text{
+		padding: 0 30px;
+	}
+	.button{
+		margin-top: 40px;
+	}
+}
+
+.video{
+	background: black;
+}
+
+.four{
+	padding-bottom: 200px;
+	position: relative;
+	background: white url(../img/light-grey-terrazzo.png);
+	background-size: cover;
+	.travel{
+		margin-top: 50px;
+	}
+	.tata {
+		position: relative;
+		padding: 40px 100px;
+		background: white;
+		p{
+			font-size: 24px;
+			font-style: italic;
+		}
+		.autor{
+			font-style: italic;
+			font-size: 18px;
+			margin: 20px 0;
+			text-transform: uppercase;
+			font-style: normal;
+			span{
+				color: #ccc;
+				font-size: 16px;
+			}
+		}
+	}
+	.button{
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%) translateY(50%);
+
+	}
+	img{
+		position: relative;
+	}
+	.div{
+		transform: translateY(-70%);
+		width: 100%;
+		position: absolute;
+		background: red;
+	}
+	.relative{
+		position: relative;
+	}
+	.absolute{
+		position: absolute;
+	}
+}
+
+.forest{
+	text-align: center;
+	background: url(../img/forest.jpg) center no-repeat;
+	background-size: cover;
+	
+	.form{
+		max-width: 700px;
+		padding: 50px 70px;
+		text-align: center;
+		display: inline-block;
+		background: rgba(58, 78, 84, 0.9);
+		.button{
+			margin: 0 auto;
+			display: block;
+		}
+		input{
+			margin: 30px 10px 25px;
+			font-size: 15px;
+			padding: 10px 0 10px 30px;
+			border: 1px solid #616f73;
+			border-radius: 100px;
+			background: rgba(44, 60, 65, 0.7);
+
+			/* margin: 0 auto; */
+
+		}
+	}
+	h2{
+		display: inline;
+		font-size: 18px;
+		color: white;
+		padding: 20px;
+	}
+
+}
+h2, p, h1{
+	line-height: 1.7;
+}
