@@ -14,9 +14,9 @@ p{
 }
 
 .main{
-	background: white url(../img/light-grey-terrazzo.png) center no-repeat;
+	background: white url(../img/light-grey-terrazzo.png) center;
 	// background: #ccc;
-	background-size: cover;
+	// background-size: cover;
 
 	position: relative;
 	
@@ -119,8 +119,8 @@ section{
 	padding: 100px 0;
 }
 .two{
-	background: white url(../img/light-grey-terrazzo.png) center no-repeat;
-	background-size: cover;
+	background: white url(../img/light-grey-terrazzo.png) center;
+	// background-size: cover;
 	text-align: center;
 	img{
 		margin-bottom: 50px;
@@ -140,8 +140,8 @@ section{
 .four{
 	padding-bottom: 200px;
 	position: relative;
-	background: white url(../img/light-grey-terrazzo.png);
-	background-size: cover;
+	background: white url(../img/light-grey-terrazzo.png) center;
+	// background-size: cover;
 	.travel{
 		margin-top: 50px;
 	}
@@ -175,7 +175,7 @@ section{
 		position: relative;
 	}
 	.div{
-		transform: translateY(-70%);
+		transform: translateY(-50%);
 		width: 100%;
 		position: absolute;
 		background: red;
@@ -194,7 +194,7 @@ section{
 	background-size: cover;
 	
 	.form{
-		max-width: 700px;
+		// max-width: 700px;
 		padding: 50px 70px;
 		text-align: center;
 		display: inline-block;
@@ -204,7 +204,7 @@ section{
 			display: block;
 		}
 		input{
-			margin: 30px 10px 25px;
+			margin: 30px 0 25px;
 			font-size: 15px;
 			padding: 10px 0 10px 30px;
 			border: 1px solid #616f73;
@@ -226,3 +226,101 @@ section{
 h2, p, h1{
 	line-height: 1.7;
 }
+
+
+@media (max-width: 1199px){
+	.content{
+		.img, .img2{
+			position: static;
+			img{
+				width: 100%;
+			}
+		}
+
+		img, .img, .img2{
+			// width: 100%;
+			// position: static;
+			// position: static;
+		}
+	}
+	.img2{
+		display: none;
+	}
+// там где цитата
+	.four{
+		padding-bottom: 300px;
+		background: url(../img/light-grey-terrazzo.png) center;
+		// background-size: 100vh;
+		.div{
+			transform: translateY(-30%);
+		}
+	}
+}
+
+@media(max-width: 991px){
+	.content{
+		position: static;
+		img{
+			
+		}
+		.img2{
+			display: none;
+		}
+
+		.img{
+			img{
+				display: none;
+			}
+			// position: static;
+			// position: static;
+		}
+	}
+
+	.four{
+		padding-bottom: 100px;
+		position: static;
+		.div{
+
+			position: static;
+			transform: translateY(0%);
+		}
+	}
+
+}
+  @media(max-width: 767px){
+  	.forest{
+  		.form{
+  			padding: 30px 15px;
+  			input{
+  				margin: 0;
+  				// margin-bottom: 20px;
+  				margin-top: 20px;
+  			}
+  			.button{
+  				margin-top: 20px;
+  			}
+  		}
+  	}
+  	.main{
+  		.nadpis{
+  			&-box{
+  				.story{
+  					p{
+  						font-size: 150px;
+  						line-height: 1.5;
+  					}
+  				}
+  			}
+  		}
+  	}
+  	.four{
+  		.div{
+  			.tata{
+  				padding: 20px 20px 30px 20px;
+  				.button{
+  					transform: translateX(-50%) translateY(0%);
+  				}
+  			}
+  		}
+  	}
+  }  

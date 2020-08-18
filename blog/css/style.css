@@ -8,8 +8,7 @@ p {
   color: #969da0;
 }
 .main {
-  background: #ffffff url(../img/light-grey-terrazzo.png) center no-repeat;
-  background-size: cover;
+  background: #ffffff url(../img/light-grey-terrazzo.png) center;
   position: relative;
 }
 .main .nadpis {
@@ -97,8 +96,7 @@ section {
   padding: 100px 0;
 }
 .two {
-  background: #ffffff url(../img/light-grey-terrazzo.png) center no-repeat;
-  background-size: cover;
+  background: #ffffff url(../img/light-grey-terrazzo.png) center;
   text-align: center;
 }
 .two img {
@@ -116,8 +114,7 @@ section {
 .four {
   padding-bottom: 200px;
   position: relative;
-  background: #ffffff url(../img/light-grey-terrazzo.png);
-  background-size: cover;
+  background: #ffffff url(../img/light-grey-terrazzo.png) center;
 }
 .four .travel {
   margin-top: 50px;
@@ -152,8 +149,8 @@ section {
   position: relative;
 }
 .four .div {
-  -webkit-transform: translateY(-70%);
-          transform: translateY(-70%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   width: 100%;
   position: absolute;
   background: red;
@@ -170,7 +167,6 @@ section {
   background-size: cover;
 }
 .forest .form {
-  max-width: 700px;
   padding: 50px 70px;
   text-align: center;
   display: inline-block;
@@ -181,7 +177,7 @@ section {
   display: block;
 }
 .forest .form input {
-  margin: 30px 10px 25px;
+  margin: 30px 0 25px;
   font-size: 15px;
   padding: 10px 0 10px 30px;
   border: 1px solid #616f73;
@@ -199,4 +195,68 @@ h2,
 p,
 h1 {
   line-height: 1.7;
+}
+@media (max-width: 1199px) {
+  .content .img,
+  .content .img2 {
+    position: static;
+  }
+  .content .img img,
+  .content .img2 img {
+    width: 100%;
+  }
+  .img2 {
+    display: none;
+  }
+  .four {
+    padding-bottom: 300px;
+    background: url(../img/light-grey-terrazzo.png) center;
+  }
+  .four .div {
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
+  }
+}
+@media (max-width: 991px) {
+  .content {
+    position: static;
+  }
+  .content .img2 {
+    display: none;
+  }
+  .content .img img {
+    display: none;
+  }
+  .four {
+    padding-bottom: 100px;
+    position: static;
+  }
+  .four .div {
+    position: static;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+@media (max-width: 767px) {
+  .forest .form {
+    padding: 30px 15px;
+  }
+  .forest .form input {
+    margin: 0;
+    margin-top: 20px;
+  }
+  .forest .form .button {
+    margin-top: 20px;
+  }
+  .main .nadpis-box .story p {
+    font-size: 150px;
+    line-height: 1.5;
+  }
+  .four .div .tata {
+    padding: 20px 20px 30px 20px;
+  }
+  .four .div .tata .button {
+    -webkit-transform: translateX(-50%) translateY(0%);
+            transform: translateX(-50%) translateY(0%);
+  }
 }
