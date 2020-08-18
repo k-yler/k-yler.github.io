@@ -2,6 +2,19 @@ p {
   padding: 0;
   margin: 0;
 }
+.b {
+  text-align: center;
+  margin: 5px 0;
+  text-transform: uppercase;
+}
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+a:focus {
+  text-decoration: none;
+  color: white;
+}
 .travel {
   text-transform: uppercase;
   font-size: 12px;
@@ -53,11 +66,14 @@ p {
 .main .content .img2 img {
   position: absolute;
   width: 300px;
+  left: 0%;
+  -webkit-transform: translateX(-30%);
+          transform: translateX(-30%);
 }
 .main .content .img img {
   padding-right: 0;
   position: absolute;
-  max-height: 450px;
+  max-height: 400px;
   right: 0%;
 }
 img {
@@ -78,7 +94,7 @@ img {
   border: none;
   text-transform: uppercase;
   color: white;
-  padding: 10px 30px;
+  padding: 15px 30px;
   border-radius: 100px;
   line-height: 1.5;
 }
@@ -196,17 +212,35 @@ p,
 h1 {
   line-height: 1.7;
 }
+.body {
+  position: relative;
+}
+.nnav {
+  position: absolute;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 50px;
+  padding-left: 5%;
+}
+.nnav-btn {
+  width: 50px;
+  height: 50px;
+  background: url(../img/menu.png) center no-repeat;
+  background-size: 100%;
+  border: none;
+}
 @media (max-width: 1199px) {
-  .content .img,
-  .content .img2 {
-    position: static;
-  }
   .content .img img,
   .content .img2 img {
     width: 100%;
   }
   .img2 {
+    -webkit-transform: translateX(30%);
+            transform: translateX(30%);
+  }
+  .img2 img {
     display: none;
+    margin-top: 250px;
   }
   .four {
     padding-bottom: 300px;
@@ -224,8 +258,12 @@ h1 {
   .content .img2 {
     display: none;
   }
-  .content .img img {
-    display: none;
+  .content .img {
+    display: block;
+    width: 100%;
+    height: 350px;
+    margin-top: 50px;
+    padding-left: 10px;
   }
   .four {
     padding-bottom: 100px;
@@ -258,5 +296,20 @@ h1 {
   .four .div .tata .button {
     -webkit-transform: translateX(-50%) translateY(0%);
             transform: translateX(-50%) translateY(0%);
+  }
+  .content {
+    position: static;
+  }
+  .content .img2 {
+    display: none;
+  }
+  .content .img {
+    display: none;
+    max-width: 400px;
+    height: 350px;
+    margin-top: 50px;
+  }
+  .content .img img {
+    width: 100%;
   }
 }

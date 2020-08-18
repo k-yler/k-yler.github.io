@@ -6,7 +6,22 @@ p{
 	padding: 0;
 	margin: 0;
 }
+.b{
+	text-align: center;
+	margin: 5px 0;
+	text-transform: uppercase;
+}
+a{
 
+	&:hover{
+		text-decoration: none;
+		color: white;
+	}
+	&:focus{
+		text-decoration: none;
+		color: white;
+	}
+}
 .travel{
 	text-transform: uppercase;
 	font-size: 12px;
@@ -62,6 +77,8 @@ p{
 			img{
 				position: absolute;
 				width: 300px;
+				left: 0%;
+				transform: translateX(-30%);
 			}
 		}
 		.img{
@@ -72,8 +89,8 @@ p{
 			img{
 				padding-right: 0;
 				position: absolute;
-				max-height: 450px;
-
+				max-height: 400px;
+		
 				right: 0%;
 			}
 		}
@@ -98,7 +115,7 @@ img{
 	border: none;
 	text-transform: uppercase;
 	color: white;
-	padding: 10px 30px;
+	padding: 15px 30px;
 	border-radius: 100px;
 	line-height: 1.5;
 	span:after{
@@ -227,11 +244,31 @@ h2, p, h1{
 	line-height: 1.7;
 }
 
+.body{
+	position: relative;
+}
+.nnav{
+	position: absolute;
+	position: fixed;
+	z-index: 9999;
+	padding-top: 50px;
+	padding-left: 5%;
+	&-btn{
+		width: 50px;
+		height: 50px;
+		background:  url(../img/menu.png) center no-repeat;
+		background-size: 100%;
+		border: none;
+	}
+}
+
+
+
 
 @media (max-width: 1199px){
 	.content{
 		.img, .img2{
-			position: static;
+			// position: static;
 			img{
 				width: 100%;
 			}
@@ -244,7 +281,15 @@ h2, p, h1{
 		}
 	}
 	.img2{
-		display: none;
+		img{
+			display: none;
+			margin-top: 250px;
+		}
+		transform: translateX(30%);
+		// width: 100%;
+		// position: absolute;
+		// margin-top: 300px;
+		// display: none;
 	}
 // там где цитата
 	.four{
@@ -268,8 +313,13 @@ h2, p, h1{
 		}
 
 		.img{
+			display: block;
+			width: 100%;
+			height: 350px;
+			margin-top: 50px;
+			padding-left: 10px;
 			img{
-				display: none;
+				// display: none;
 			}
 			// position: static;
 			// position: static;
@@ -288,6 +338,9 @@ h2, p, h1{
 
 }
   @media(max-width: 767px){
+  	button {
+  		// padding: 10px 0;
+  	}
   	.forest{
   		.form{
   			padding: 30px 15px;
@@ -321,6 +374,28 @@ h2, p, h1{
   					transform: translateX(-50%) translateY(0%);
   				}
   			}
+  		}
+  	}
+  	.content{
+  		position: static;
+  		img{
+  			
+  		}
+  		.img2{
+  			display: none;
+  		}
+
+  		.img{
+  			display: none;
+  			max-width: 400px;
+  			height: 350px;
+  			margin-top: 50px;
+  			img{
+  				width: 100%;
+  				// display: none;
+  			}
+  			// position: static;
+  			// position: static;
   		}
   	}
   }  

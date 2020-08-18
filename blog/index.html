@@ -7,10 +7,31 @@
 	<title>Blog</title>
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="bootstrap.js"></script>
 </head>
 <body>
 
-<main class="main">
+	<div class="nnav" id="menu">
+		<div class="dropdown">
+		  <button class="nnav-btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+		    
+		    <!-- <span class="caret"></span> -->
+		  </button>
+		  <ul class="dropdown-menu " aria-labelledby="dropdownMenu1">
+		    <li><a class="navibar-link a b" href="#main">main</a></li>
+		    <li><a class="navibar-link a b" href="#two">two</a></li>
+		    <li><a class="navibar-link a b" href="#video">video</a></li>
+		    <li><a class="navibar-link a b" href="#four">four</a></li>
+		    <li><a class="navibar-link a b" href="#form">form</a></li>
+		    <!-- <li role="separator" class="divider"></li> -->
+		    <!-- <li><a href="#">Separated link</a></li> -->
+		  </ul>
+		</div>
+	</div>
+
+
+<main class="main" id="main">
 	<div class="container">
 		<!-- фон с надписью -->
 		<div class="nadpis">
@@ -34,7 +55,8 @@
 					<h1 class="header">Nullam id dolor id nibh ultricies vehicula ut id elit.</h1>
 					<p class="text">Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. </p>
 					<p class="text">Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-					<button class="button"><span>full story</span></button>
+					<!-- <button class="button"><span>full story</span></button> -->
+					<a class="button" href="somewhere.html"><span>full story</span></a>
 				</div>
 		
 				<div class="col-md-6 col-md-offset-1">
@@ -51,7 +73,7 @@
 	</div>
 </main>
 
-<section class="two">
+<section class="two" id="two">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
@@ -60,17 +82,18 @@
 				<img src="img/light-man.jpg" width="100%" alt="">
 				<p class="text text-left">Donec aredsed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. </p>
                 <p class="text text-left">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. </p>
-                <button class="button"><span>full story</span></button>
+                <!-- <button class="button"><span>full story</span></button> -->
+                <a class="button" href="somewhere.html"><span>full story</span></a>
 			</div>
 		</div>
 	</div>
 </section>
 	
-<section class="video">
+<section class="video" id="video">
 	
 </section>
 
-<section class="four">
+<section class="four" id="four">
 	<div class="container">
 		<div class="row">
 
@@ -86,7 +109,8 @@
 					<div class="tata">
 						<p clsss="citata">“Donec id elit non mi porta gravida at eget metus. Vestibulum id ligula porta felis euismod semper. Curabitur blandit tempus porttitor”</p>
 						<p class="autor">ven deisel <span>1962-2006</span></p>
-						<button class="button"><span>full story</span></button>
+						<!-- <button class="button"><span>full story</span></button> -->
+						<a class="button" href="somewhere.html"><span>full story</span></a>
 					</div>
 				</div>
 			</div>
@@ -94,7 +118,7 @@
 	</div>
 </section>
 
-<section class="forest">
+<section class="forest" id="form">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
@@ -119,6 +143,19 @@
 	</div>
 </section>
 
+
+<script type="text/javascript">
+ $(document).ready(function(){
+    $("#menu").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1000);
+    });
+
+
+});
+</script>
 
 </body>
 </html>
