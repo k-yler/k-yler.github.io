@@ -1,0 +1,247 @@
+@orange: #FF9200;
+@white: #fffeec;
+
+body{
+	background: url(../img/dark_wood.png) center;
+} 
+section{
+	padding: 100px 0;
+}
+
+.button{
+	border: 1px solid @orange;
+	color: @orange;
+	text-transform: uppercase;
+	padding: 20px 35px;
+
+	transition: .3s;
+	&:hover, &:active{
+		text-decoration: none;
+		color: @white;
+		border-color: darken(@orange, 8%);
+		background-color: darken(@orange, 8%);
+	}
+	&:focus{
+		color: @orange;
+		text-decoration: none;
+	}
+}
+
+.smalll{
+	padding-top: 0;
+}
+
+.main{
+
+	// height: 100vh;
+	color: @white;
+
+	.navi{
+		padding-top: 10px;
+		&-left{
+			p{
+				font-size: 25px;
+			}
+		}
+		&-right{
+			text-align: right;
+			a{
+				margin-left: 20px;
+			}
+		}
+	}
+	&-content-who{
+		padding-top: 40px;
+		.knopka{
+			margin-top: 50px;
+		}
+		.free{
+			color: @orange;
+			font-size: 18px;
+		}
+		.about{
+			font-size: 20px;
+			padding-bottom: 20px;
+		}
+		.fio{
+			padding-bottom: 10px;
+		}
+	}
+	&-content-img{
+		text-align: center;
+		img{
+			width: 80%;
+		}
+	}
+}
+
+.works{
+	padding-top: 0;
+	border: 2px solid @orange;
+}
+
+.uslugi{
+	padding-top: 0;	
+	color: @white;	
+	h1{
+		margin-bottom: 70px;
+	}
+	.cont{
+
+		.fon{
+			position: absolute;
+			p{
+				font-weight: 800;
+				opacity: .2;
+				font-size: 140px;
+				line-height: 0.1;
+				padding: 0;
+				margin: 0; 
+			}
+		}
+		min-height: 180px;
+		img{
+			position: absolute;
+		}
+		p{
+			padding-left: 50px;
+		}
+		h2{
+			padding-left: 50px;
+			padding-top: 0;
+			margin: 0;
+			margin-bottom: 10px;
+		}
+	}
+
+}
+
+.question{
+	padding-top: 0;
+	color: @white;
+	.dropdown{
+		margin-bottom: 20px;
+
+		.btn1{
+			padding: 10px;
+			font-size: 25px;
+			text-align: left;
+			color: @white;
+			background: rgba(0, 0, 0, 0);
+			border: 1px solid @orange;
+		}
+		p{
+			// color: black;
+		}
+		
+		ul{
+			width: 100%;
+			color: @white;
+			background: darken(@orange, 8%);
+
+			li{
+
+				font-size: 20px;
+				padding: 20px 30px;
+			}
+		}
+	}
+
+}
+
+.sprosit{
+	padding-top: 0;
+	text-align: center;
+	color: @white;
+	.form{
+		small{
+			display: block;
+			color: gray;
+			font-size: 10px;
+			padding-bottom: 35px;
+
+		}
+		// background: rgba(253,145,0, .2);
+		color: @white;
+		h2{
+			// padding-top: 30px;
+			padding-bottom: 30px;
+		}
+		&-input{
+			color: @white;
+			border: 2px solid @orange;
+			background: none;
+			padding: 10px 20px;
+			width: 100%;
+			&:focus{
+				outline: none;
+			}
+		}
+		&-button{
+			width: 100%;
+			text-transform: uppercase;
+			background: none;
+			border: 2px solid @orange;
+			padding: 10px 20px;
+			margin-bottom: 5px;
+			transition: .3s;
+			&:hover{
+				background: darken(@orange, 8%);
+			}
+			&:focus{
+				outline: none;
+			}			
+		}
+		&-area{
+			background: none;
+			color: @white;
+			border: 2px solid @orange;
+			display: block;
+			resize: none;
+			width: 100%;
+			padding: 10px;	
+			margin: 20px 0;
+			&:focus{
+				outline: none;
+			}
+		}
+	}
+}
+
+
+
+@media (max-width: 767px){
+	.main{
+		.navi{
+			&-right, &-left{
+				text-align: center;
+				padding: 0;
+				margin: 0;
+			}
+		}
+	.knopka{
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	}
+    .uslugi{
+    	.cont{
+    		min-height: 170px;
+    	}
+    } 
+    .button{
+    	display: block;
+    }
+    .sprosit{
+    	.form{
+    		&-input{
+    			margin: 0 auto 20px auto;
+    			display: block;
+    			// width: 90%;
+    		}
+    		&-area{
+    			margin-top: 0;
+    		}
+    	}
+    }
+}
