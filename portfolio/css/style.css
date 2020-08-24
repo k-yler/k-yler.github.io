@@ -5,10 +5,11 @@ section {
   padding: 100px 0;
 }
 .button {
-  border: 1px solid #ff9200;
+  border: 2px solid #ff9200;
   color: #ff9200;
   text-transform: uppercase;
-  padding: 20px 35px;
+  padding: 17px 100px;
+  font-size: 16px;
   -webkit-transition: .3s;
   transition: .3s;
 }
@@ -28,6 +29,9 @@ section {
 }
 .main {
   color: #fffeec;
+}
+.main h1 {
+  font-size: 35px;
 }
 .main .navi {
   padding-top: 10px;
@@ -60,9 +64,12 @@ section {
 }
 .main-content-img {
   text-align: center;
+  border-radius: 1000px;
 }
 .main-content-img img {
-  width: 80%;
+  width: 100%;
+  border-radius: 1000px;
+  border: 2px solid #ff9200;
 }
 .works {
   padding-top: 0;
@@ -73,6 +80,7 @@ section {
   color: #fffeec;
 }
 .uslugi h1 {
+  font-size: 35px;
   margin-bottom: 70px;
 }
 .uslugi .cont {
@@ -93,37 +101,56 @@ section {
   position: absolute;
 }
 .uslugi .cont p {
+  font-size: 14px;
   padding-left: 50px;
 }
 .uslugi .cont h2 {
+  font-size: 25px;
   padding-left: 50px;
   padding-top: 0;
   margin: 0;
   margin-bottom: 10px;
 }
+/* :root {
+  // --animate-duration: 800ms;
+  --animate-delay: 2s;
+}
+.animate__animated.animate__bounce {
+  --animate-duration: 1s;
+  --animate-delay: 2s;
+} */
 .question {
   padding-top: 0;
   color: #fffeec;
 }
-.question .dropdown {
-  margin-bottom: 20px;
+.question h1 {
+  font-size: 35px;
+  margin-left: 12px;
+  margin-bottom: 30px;
 }
-.question .dropdown .btn1 {
-  padding: 10px;
+.question .accordion .card {
+  background: none;
+}
+.question .accordion .card-body {
+  font-size: 18px;
+  border: 2px solid #ff9200;
+  margin: 0 13px;
+  border-top: none;
+}
+.question .accordion .card .btn1 {
+  color: #fffeec;
+  padding: 10px 20px;
   font-size: 25px;
-  text-align: left;
-  color: #fffeec;
-  background: rgba(0, 0, 0, 0);
-  border: 1px solid #ff9200;
+  border: 2px solid #ff9200;
+  background: none;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
-.question .dropdown ul {
-  width: 100%;
-  color: #fffeec;
+.question .accordion .card .btn1:hover {
   background: #d67b00;
 }
-.question .dropdown ul li {
-  font-size: 20px;
-  padding: 20px 30px;
+.question .accordion .card .btn1:focus {
+  outline: none;
 }
 .sprosit {
   padding-top: 0;
@@ -140,9 +167,11 @@ section {
   padding-bottom: 35px;
 }
 .sprosit .form h2 {
+  font-size: 30px;
   padding-bottom: 30px;
 }
 .sprosit .form-input {
+  font-size: 14px;
   color: #fffeec;
   border: 2px solid #ff9200;
   background: none;
@@ -153,6 +182,7 @@ section {
   outline: none;
 }
 .sprosit .form-button {
+  font-size: 14px;
   width: 100%;
   text-transform: uppercase;
   background: none;
@@ -169,6 +199,7 @@ section {
   outline: none;
 }
 .sprosit .form-area {
+  font-size: 14px;
   background: none;
   color: #fffeec;
   border: 2px solid #ff9200;
@@ -204,5 +235,10 @@ section {
   }
   .sprosit .form-area {
     margin-top: 0;
+  }
+}
+@media (max-width: 560px) {
+  .button {
+    padding: 17px 0;
   }
 }
