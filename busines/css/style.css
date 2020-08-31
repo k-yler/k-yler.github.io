@@ -7,12 +7,39 @@ header {
   background-size: cover;
   height: 100vh;
 }
-header .logo {
-  position: relative;
-  padding-top: 40px;
-  text-align: center;
+header .navv-left {
+  position: absolute;
+  margin-left: 20px;
 }
-header .logo .bor {
+header .navv-right {
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+}
+header .navv ul {
+  font-size: 18px;
+  padding-left: 0;
+}
+header .navv ul li {
+  list-style: none;
+  display: inline;
+}
+header .navv ul li a {
+  text-transform: uppercase;
+  padding: 10px 15px;
+  display: inline-block;
+  color: white;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+header .navv ul li a:hover,
+header .navv ul li a:active {
+  text-decoration: none;
+}
+header .navv ul li a:hover {
+  color: #005ce5;
+}
+header .bor {
   width: 370px;
   height: 370px;
   border: 10px solid #fba419;
@@ -21,6 +48,15 @@ header .logo .bor {
   left: 50%;
   -webkit-transform: translateY(-50%) translateX(-50%) rotate(45deg);
           transform: translateY(-50%) translateX(-50%) rotate(45deg);
+}
+header .logo {
+  left: 50%;
+  top: 0%;
+  -webkit-transform: translateY(100%) translateX(-35%) rotate(-45deg);
+          transform: translateY(100%) translateX(-35%) rotate(-45deg);
+  position: relative;
+  padding-top: 40px;
+  text-align: center;
 }
 header .logo .logo2:after {
   content: '';
@@ -34,33 +70,45 @@ header .logo .logo2 .img {
   width: 120px;
 }
 header .logo ul {
+  z-index: 999;
   padding: 0;
 }
 header .logo ul li {
   width: 40px;
   height: 40px;
-  border: 2px solid #00337f;
+  border: 2px solid white;
   border-radius: 100px;
   line-height: 2.2;
   margin: 0 5px;
   padding-right: 0px;
   list-style: none;
-  color: #00337f;
+  color: white;
   display: inline-block;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 header .logo ul li:first-child {
   padding-right: 2px;
 }
+header .logo ul li:hover,
+header .logo ul li a:hover {
+  color: #00337f;
+  border-color: #00337f;
+}
+header .logo ul li a {
+  -webkit-transition: .3s;
+  transition: .3s;
+}
 header h1,
 header p,
-header a {
+header .a {
   text-align: center;
   display: block;
   color: white;
 }
 header h1 {
   padding: 0 20px;
-  margin-top: 100px;
+  padding-top: 250px;
   font-size: 90px;
   line-height: 1;
 }
@@ -70,15 +118,16 @@ header p {
   margin-top: 30px;
   margin-bottom: 30px;
 }
-a {
+.a {
   text-transform: uppercase;
   text-decoration: none;
 }
-a:hover,
-a:active {
+.a:hover,
+.a:active {
   text-decoration: none;
 }
 .button {
+  text-transform: uppercase;
   display: inline-block;
   color: white;
   background: #fba419;
@@ -88,6 +137,15 @@ a:active {
   transition: .3s;
 }
 .button:hover {
+  text-decoration: none;
   background: #dd8a04;
   color: white;
+}
+@media (max-height: 580px) {
+  header {
+    height: 100%;
+  }
+  header .button {
+    margin-bottom: 50px;
+  }
 }

@@ -9,20 +9,58 @@ header {
   background-position: center top 20%;
   background-size: cover;
   height: 100vh;
-  // position: absolute;
+  // position: relative;
+  .navv{
+  	&-left{
+  		position: absolute;
+  		margin-left: 20px;
+  	}
+  	&-right{
+  		position: absolute;
+  		// display: inline-block;
+  		// text-align: right;
+  		right: 0;
+  		margin-right: 20px;
+  	}
+  	ul{ 
+  		font-size: 18px;
+  		padding-left: 0;
+  		li{
+  			list-style: none;
+  			display: inline;
+  			a{	
+  				text-transform: uppercase;
+  				padding: 10px 15px;
+  				display: inline-block;
+  				color: white;
+  				transition: .3s;
+  				&:hover, &:active{
+  					text-decoration: none;
+  				}
+  				&:hover{
+  					// color: darken(white, 30%);
+  					color:  lighten( #00337f, 20%);
+  				}
+  			}
+  		}
+  	}
+  }
+  .bor{
+  	width: 370px;
+  	height: 370px;
+  	border: 10px solid @orange;
+  	position: absolute;
+  	top: 0%;
+  	left: 50%;
+  	transform: translateY(-50%) translateX(-50%) rotate(45deg);
+  }
 
   .logo{
+  	// background: black;
+  	left: 50%;
+  	top: 0%;
+  	transform: translateY(100%) translateX(-35%) rotate(-45deg);
   	position: relative;
-  	.bor{
-  		width: 370px;
-  		height: 370px;
-  		border: 10px solid @orange;
-  		position: absolute;
-  		top: 0%;
-  		left: 50%;
-  		transform: translateY(-50%) translateX(-50%) rotate(45deg);
-  		// transform: rotate(45deg);
-  	}
   	padding-top: 40px;
   	text-align: center;
   	.logo2{
@@ -41,33 +79,41 @@ header {
   		}
   	}
   	ul{
+  		z-index: 999;
   		padding: 0;
   		li{
   			width: 40px;
   			height: 40px;
-  			border: 2px solid #00337f;
+  			border: 2px solid white;
   			border-radius: 100px;
   			line-height: 2.2;
   			margin: 0 5px;
   			padding-right: 0px;
   			list-style: none;
-  			color: #00337f;
+  			color: white;
   			display: inline-block;
+  			transition: .3s;
   			&:first-child{
   				padding-right: 2px;
+  			}
+  			&:hover, a:hover{
+  				color:#00337f;
+  				border-color: #00337f;
+  			}
+  			a{
+  				transition: .3s;
   			}
   		}
   	}
   }
-  h1, p, a{
-
+  h1, p, .a{
   	text-align: center;
   	display: block;
   	color: white;
   }
   h1{
   	padding: 0 20px;
-  	margin-top: 100px;
+  	padding-top: 250px;
   	font-size: 90px;
   	line-height: 1;
   }
@@ -79,7 +125,7 @@ header {
   }
 
 }
-a{
+.a{
 	text-transform: uppercase;
 	text-decoration: none;
 	&:hover, &:active{
@@ -87,6 +133,7 @@ a{
 	}
 }
 .button{
+	text-transform: uppercase;
 	display: inline-block;
 	color: white;
 	background: @orange;
@@ -94,7 +141,21 @@ a{
 	border-radius: 150px;
 	transition: .3s;
 	&:hover{
+		text-decoration: none;
 		background: darken(@orange, 10%);
 		color: white;
+	}
+}
+
+
+
+
+
+@media (max-height: 580px){
+	header{
+		height: 100%;
+		.button{
+			margin-bottom: 50px;
+		}
 	}
 }
