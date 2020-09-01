@@ -253,7 +253,7 @@ section {
   border-radius: 100px;
   list-style: none;
   display: inline-block;
-  margin: 0 20px;
+  margin: 10px 20px;
 }
 .foot ul li:hover {
   border-color: #005ce5;
