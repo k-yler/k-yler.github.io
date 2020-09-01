@@ -5,7 +5,9 @@ header {
   background: url(../img/bg.jpg) no-repeat;
   background-position: center top 20%;
   background-size: cover;
-  height: 100vh;
+}
+header .button {
+  margin-bottom: 50px;
 }
 header .navv-left {
   position: absolute;
@@ -141,11 +143,143 @@ header p {
   background: #dd8a04;
   color: white;
 }
-@media (max-height: 580px) {
-  header {
-    height: 100%;
+section {
+  padding: 50px 0;
+}
+.ourteam {
+  background: #2f2f2f;
+}
+.ourteam .palka2 {
+  width: 50%;
+  height: 5px;
+  margin: 30px 0;
+  background: #fba419;
+}
+.ourteam h1 {
+  text-transform: uppercase;
+  font-size: 50px;
+  color: white;
+}
+.ourteam h1 span {
+  color: #fba419;
+}
+.ourteam p {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: gray;
+}
+.ourteam p span {
+  color: white;
+}
+.ourteam .button {
+  margin-bottom: 50px;
+}
+.ourteam-card {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.ourteam-card img {
+  width: 100%;
+}
+.ourteam-card h2 {
+  margin-top: 10px;
+  color: #fba419;
+  text-transform: uppercase;
+}
+.ourteam-card p {
+  font-size: 18px;
+}
+.choose {
+  background: #2f2f2f;
+}
+.choose .box {
+  width: 100%;
+  height: 100%;
+  background: url(../img/bg5.jpg) center no-repeat;
+  background-size: cover ;
+}
+.choose .box img {
+  display: none;
+}
+.choose h1 {
+  text-transform: uppercase;
+  font-size: 50px;
+  margin-left: 50px;
+  color: white;
+}
+.choose h1 span {
+  color: #fba419;
+}
+.choose img {
+  width: 100%;
+}
+.choose-card {
+  margin-left: 50px;
+  color: white;
+}
+.choose-card img {
+  display: inline-block;
+  width: 50px;
+}
+.choose-card h4 {
+  margin-left: 50px;
+  display: inline-block;
+}
+.choose-card p {
+  margin-left: 100px;
+  color: grey;
+}
+.foot {
+  text-align: center;
+  background: url(../img/bg-foot.jpg) center no-repeat;
+  background-size: cover;
+}
+.foot h1 {
+  text-transform: uppercase;
+  font-size: 50px;
+  color: white;
+  margin-bottom: 50px;
+}
+.foot h1 span {
+  color: #fba419;
+}
+.foot ul {
+  list-style: none;
+}
+.foot ul li {
+  width: 65px;
+  height: 65px;
+  border: 2px solid white;
+  border-radius: 100px;
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+}
+.foot ul li:hover {
+  border-color: #005ce5;
+}
+.foot ul li a {
+  font-size: 30px;
+  line-height: 2;
+  padding: 15px;
+  vertical-align: middle;
+  color: white;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+.foot ul li a:hover {
+  color: #005ce5;
+}
+@media (max-width: 767px) {
+  .choose .box img {
+    display: block;
   }
-  header .button {
-    margin-bottom: 50px;
+}
+@media (max-width: 868px) {
+  .choose-card h4 {
+    margin-left: 10px;
+  }
+  .choose-card p {
+    margin-left: 60px;
   }
 }
