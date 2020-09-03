@@ -134,7 +134,7 @@ header p {
   display: inline-block;
   color: white;
   background: #fba419;
-  padding: 10px 30px;
+  padding: 10px 30px ;
   border-radius: 150px;
   -webkit-transition: .3s;
   transition: .3s;
@@ -191,6 +191,7 @@ section {
   font-size: 18px;
 }
 .choose {
+  padding: 0;
   background: #2f2f2f;
 }
 .choose .box {
@@ -230,6 +231,70 @@ section {
   padding-right: 10px;
   margin-left: 100px;
   color: grey;
+}
+.services {
+  padding: 0;
+  display: grid;
+  grid-template-columns: 4fr 5fr;
+}
+.services .box-1 {
+  padding: 50px 0;
+  justify-self: end;
+  padding-right: 100px;
+  max-width: 400px;
+}
+.services .box-1 h1 {
+  margin-bottom: 20px;
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 50px;
+  color: black;
+}
+.services .box-1 h1 span {
+  color: #fba419;
+}
+.services .box-1 p {
+  text-align: right;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: gray;
+}
+.services .box-1 p span {
+  color: black;
+}
+.services .box-1 .button {
+  margin-top: 20px;
+  margin-left: 140px;
+}
+.services .box-2 {
+  background: url(../img/services.jpg) center no-repeat;
+  background-size: cover;
+}
+.services .box-2 .baga {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+  text-align: center;
+  padding: 80px;
+  background: #2f2f2f;
+  margin: 55px 0;
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
+}
+.services .box-2 .baga-cont h4 {
+  margin-top: 20px;
+  color: #fba419;
+}
+.services .box-2 .baga-cont i {
+  width: 70px;
+  height: 70px;
+  line-height: 2.1;
+  border: 2px solid white;
+  border-radius: 100px;
+  color: white;
+}
+.services .box-2 .baga-cont p {
+  color: gray;
 }
 .foot {
   text-align: center;
@@ -410,6 +475,32 @@ section {
   border-radius: 100px;
   background: #fba419;
 }
+@media (max-width: 1099px) {
+  .services {
+    display: block;
+  }
+  .services .box-1 {
+    text-align: center;
+    padding: 50px 50px;
+    max-width: none;
+  }
+  .services .box-1 h1 {
+    text-align: center;
+  }
+  .services .box-1 p {
+    text-align: center;
+  }
+  .services .box-1 .button {
+    margin: 0;
+  }
+  .services .box-2 {
+    padding: 20px;
+  }
+  .services .box-2 .baga {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
 @media (max-width: 906px) {
   .footer .cont {
     min-height: 600px;
@@ -427,6 +518,14 @@ section {
   .footer .cont .bor2,
   .footer .cont .privet {
     display: none;
+  }
+  .services .box-2 {
+    padding: 10px;
+  }
+  .services .box-2 .baga {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    grid-template-columns: 1fr;
   }
 }
 @media (max-width: 767px) {

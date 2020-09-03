@@ -13,6 +13,7 @@ header {
   // position: relative;
   .button{
   	margin-bottom: 50px;
+
   }
   .navv{
   	&-left{
@@ -137,11 +138,13 @@ header {
 	}
 }
 .button{
+	// padding-bottom: 50px;
+
 	text-transform: uppercase;
 	display: inline-block;
 	color: white;
 	background: @orange;
-	padding: 10px 30px;
+	padding: 10px 30px ;
 	border-radius: 150px;
 	transition: .3s;
 	&:hover{
@@ -199,6 +202,7 @@ section{
 	}
 }
 .choose{
+	padding: 0;
 	.box{
 		width: 100%;
 		height: 100%;
@@ -242,6 +246,73 @@ section{
 			color: grey;
 		}
 
+	}
+}
+
+.services{
+	padding: 0;
+	display: grid;
+	grid-template-columns: 4fr 5fr;
+	.box-1{
+		padding: 50px 0;
+		justify-self: end;
+		padding-right: 100px;
+		max-width: 400px;
+		h1{
+			margin-bottom: 20px;
+			text-align: right;
+			text-transform: uppercase;
+			font-size: 50px;
+			color: black;
+			span{
+				color: @orange;
+			}
+		}
+		p{
+			text-align: right;
+			margin-bottom: 20px;
+			font-size: 18px;
+			color: gray;
+			span{
+				color: black;
+			}
+		}
+		.button{
+			margin-top: 20px;
+			margin-left: 140px;
+		}
+	}
+	.box-2{
+		background: url(../img/services.jpg) center no-repeat;
+		background-size: cover;
+		.baga{
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 40px;
+			text-align: center;
+			padding: 80px;
+			background: #2f2f2f;
+			margin: 55px 0;
+			transform: translateX(-50px);
+			&-cont{
+				h4{
+					margin-top: 20px;
+					color: @orange;
+				}
+				i{
+					width: 70px;
+					height: 70px;
+					line-height: 2.1;
+					// padding: 25px;
+					border: 2px solid white;
+					border-radius: 100px;
+					color: white;
+				}
+				p{
+					color: gray;
+				}
+			}
+		}
 	}
 }
 
@@ -441,7 +512,37 @@ section{
 	}
 }
 
+@media( max-width: 1099px){
+	.services{
+		display: block;
 
+		// grid-template-columns: 1fr;
+		// grid-template-rows: 1fr 1fr;
+		// align-items: end;
+		// min-height: auto;
+		.box-1{
+			h1{
+				text-align: center;
+			}
+			p{
+				text-align: center;
+			}
+			text-align: center;
+			.button{
+				margin: 0;
+			}
+			padding: 50px 50px;
+			max-width: none;
+		}
+		.box-2{
+			padding: 20px;
+			.baga{
+				transform: translateX(-0px);
+			}
+		}
+
+	}
+}
 
 @media( max-width: 906px){
 	.footer{
@@ -465,6 +566,17 @@ section{
 
 			}
 		}
+	}
+	.services{
+		.box-2{
+			padding: 10px;
+			.baga{
+				// padding: 10px;
+				transform: translateX(-0px);
+				grid-template-columns: 1fr;
+			}
+		}
+
 	}
 }
 
