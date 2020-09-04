@@ -11,20 +11,25 @@
 	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
 	<!-- <script src="bootstrap.js"></script> -->
 	<script src="https://use.fontawesome.com/64f076bdb3.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+
 </head>
 <body>
 
 <header>
-	<div class="navv">
+	
+
+	<div class="navv" id="menu">
 		<ul class="navv-left">
 			<li><a href="#">home</a></li>
-			<li><a href="#">about us</a></li>
-			<li><a href="#">blog</a></li>
+			<li><a href="#team">about us</a></li>
+			<li><a href="#works">works</a></li>
 		</ul>
 		<ul class="navv-right">
-			<li><a href="#">services</a></li>
-			<li><a href="#">pages</a></li>
-			<li><a href="#">contact us</a></li>
+			<li><a href="#services">services</a></li>
+			<li><a href="#feedback">feedback</a></li>
+			<li><a href="#contact">contact us</a></li>
 		</ul>
 	</div>
 	<div class="bor">
@@ -48,7 +53,31 @@
 <!-- <i class="fa fa-google-plus" aria-hidden="true"></i> -->
 <!-- <i class="fa fa-youtube" aria-hidden="true"></i> -->
 
-<section class="ourteam">
+
+<section class="strah" id="strah">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 offset-md-1">
+				<h1><span>we are </span>creative team</h1>
+				<div class="palka2"></div>
+				<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quisquam dicta minima culpa dolor accusamus atque sint fuga impedit odio consectetur nisi quam, asperiores incidunt aliquam maxime doloribus, recusandae. Nulla.</p>
+				<a class="button" href="#">read more</a>
+			</div>
+			<div class="col-md-7">
+				<div class="box1 box1-bor"></div>
+				<div class="cont">
+					<div class="box box-one"></div>
+					<div class="box box-two"></div>
+					<div class="box box-three"></div>
+					<div class="box box-four"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="ourteam" id="team">
 	<div class="container">
 		<div class="row">
 
@@ -111,6 +140,27 @@
 	</div>
 </section>
 
+<section class="work" id="works">
+	<div class="container">
+		<div class="row no-gutters">
+			<div class="col-lg-3 offset-lg-1">
+				<h1><span>our </span>creative work</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Lorem<span></span></p>
+				<a href="#" class="button">read more</a>
+			</div>
+			<div class="col-lg-7 offset-lg-1">
+				<div class="box">
+					<div class="box-one"><img src="img/non1.jpg" alt=""></div>
+					<div class="box-two"><img src="img/non2.jpg" alt=""></div>
+					<!-- <div class="box-four"><img src="img/non4.jpg" alt=""></div> -->
+					<div class="box-three"><img src="img/non3.jpg" alt=""></div>
+					<div class="box-four"><img src="img/non4.jpg" alt=""></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
 <section class="choose">
 		<div class="row no-gutters">
 			<div class="col-md-6">
@@ -139,7 +189,7 @@
 		</div>
 </section>
 
-<section class="services">
+<section class="services" id="services">
 	<div class="box-1">
 		<h1><span>our <br></span> best services</h1>
 		<p><span>Lorem ipsum dolor sit, amet consectetur adipisicing, elit. Architecto, dolorum! Cumque distinctio veniam consectetur beatae amet optio nostrum itaque impedit!</span> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, magnam. Quisquam, omnis nihil, mollitia aut nulla vero. Omnis ducimus assumenda possimus officia enim iusto vel. Sed dolorum cum itaque incidunt iusto voluptates libero tenetur dolore consequatur corporis. Ex totam culpa rerum rem molestias dignissimos deserunt, incidunt porro, corrupti ullam iure.</p>
@@ -171,7 +221,7 @@
 	</div>
 </section>
 
-<section class="feedback">
+<section class="feedback" id="feedback">
 	<div class="chtoto">
 		<div class="box-1">
 			<h1><span>our <br></span>client say</h1>
@@ -199,7 +249,7 @@
 	</div>
 </section>
 
-<section class="foot">
+<section class="foot" id="contact">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-10 offset-md-1">
@@ -251,14 +301,26 @@
 			<p> bla bla second adress</p>
 			</div>
 		</div>
-		<div class="bor1">
+		<div class="bor">
 			<!-- <p>Designed By PSDFreebies.com</p>
 			<div class="p">COPYRIGHT 2017</div> -->
-		</div>
-		<div class="bor2">
 		</div>
 	</div>
 </footer>
 
+<script type="text/javascript">
+ $(document).ready(function(){
+    $("#menu").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1000);
+    });
+
+
+});
+</script>
+
+	
 </body>
 </html>
