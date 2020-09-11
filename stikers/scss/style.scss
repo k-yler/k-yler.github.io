@@ -12,7 +12,7 @@ $w: #fff;
   transition: 0.3s;
   &:hover,
   &:active {
-    color: darkcyan;
+    color: #008a8a;
     text-decoration: none;
   }
 }
@@ -23,6 +23,8 @@ $w: #fff;
   // box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   display: flex;
   position: fixed;
+  top: 0;
+  left: 0;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -46,19 +48,17 @@ $w: #fff;
     // background: #ccc;
   }
   &__logo {
-    width: 60px;
-    height: 60px;
-    
+    padding: 7px 0;    
   }
 }
-@media(max-width: 567px){
+@media(max-width: 672px){
   .nav{
     padding: 0 50px;
     border: none;
     // flex-direction: column;
   }
 }
-@media(max-width: 502px){
+@media(max-width: 572px){
   .nav{
     padding: 0 10px;
     border: none;
@@ -67,15 +67,15 @@ $w: #fff;
       // margin: 0;
     }
   }
-  @media(max-width: 383px){
+  @media(max-width: 492px){
     .nav{
-      padding: 0 5px;
-      &__link {
-        padding: 0;
-        &:nth-child(2) {
-          // padding-right: 0;
-          padding: 0 5px;
-        }
+      // padding: 0 5px;
+      flex-direction: column;
+    }
+    .prew{
+      // padding-top: 100px;
+      .container{
+        margin-top: 25px;
       }
     }
   }
@@ -103,6 +103,14 @@ $w: #fff;
     // background: url(../img/unnamed.jpg) center no-repeat;
     // background-size: cover;
     overflow: hidden;
+    a{
+      // position: absolute;
+      z-index: 10;
+      // display: inline-block;
+      background: #000;
+      width: 110%;
+      height: 110%;
+    }
     img {
       width: 380px;
       // height: 512px;
@@ -176,12 +184,32 @@ $w: #fff;
     overflow: hidden;
     // width: 50%;
     padding: 20px;
+    .subtitle{
+      margin: 0;
+    }
+    a{
+      // padding: 20px;
+      // margin-top: 20px;
+      color: black;
+      transition: .3s;
+      h4{
+        margin-top: 15px;
+      }
+      &:hover{
+        text-decoration: none;
+        color: darkcyan;
+      }
+    }
     // padding: 20px 20px 20px 0;
     // background: #000;
     display: inline-block;
     p, h4{
       // display: inline-block;
       // max-width: 130px;
+    }
+    p{
+      padding: 0;
+      margin: 0;
     }
     .label{
       color: white;
