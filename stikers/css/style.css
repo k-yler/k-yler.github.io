@@ -75,6 +75,7 @@
 }
 
 .prew .container {
+  padding-bottom: 30px;
   padding-top: 60px;
 }
 
@@ -135,39 +136,32 @@
 
 .content {
   background: #f3f3f3;
-  padding-top: 20px;
 }
 
 .content__row {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(45%, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 30px;
 }
 
 .content__card {
-  margin-right: 20px;
-  margin-top: 20px;
   background: white;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-shadow: 0px -2px 40px 2px #ccc;
           box-shadow: 0px -2px 40px 2px #ccc;
 }
 
 .content__card .img {
-  width: 50%;
+  width: 100%;
   overflow: hidden;
 }
 
 .content__card .img img {
-  height: 100%;
+  width: 100%;
 }
 
 .content__tile {
-  width: 50%;
   padding: 20px;
   display: inline-block;
 }
