@@ -153,6 +153,7 @@
 }
 
 .prew__box p {
+  max-width: 300px;
   background: rgba(255, 255, 255, 0.5);
   -webkit-border-radius: 100px;
           border-radius: 100px;
@@ -168,7 +169,7 @@
 }
 
 .prew__box:hover img {
-  opacity: .8;
+  opacity: 0.8;
   width: 400px;
 }
 
@@ -192,9 +193,9 @@
   background: white;
   -webkit-box-shadow: 0px -2px 40px 2px #ccc;
           box-shadow: 0px -2px 40px 2px #ccc;
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-  transition: .3s;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
   overflow: hidden;
 }
 
@@ -225,9 +226,9 @@
 
 .content__tile a {
   color: black;
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-  transition: .3s;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .content__tile a h4 {
@@ -259,4 +260,102 @@
 
 .content__tile .label__gift {
   background: #6666ff;
+}
+
+.kartochka__row {
+  padding-top: 90px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 1fr;
+      grid-template-columns: 3fr 1fr;
+  -ms-grid-rows: max-content;
+      grid-template-rows: -webkit-max-content;
+      grid-template-rows: max-content;
+  -webkit-box-align: start;
+  -webkit-align-items: start;
+      -ms-flex-align: start;
+          align-items: start;
+  grid-gap: 30px;
+}
+
+.kartochka__main {
+  padding: 40px;
+  background: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (max-content)[4];
+      grid-template-rows: repeat(4, -webkit-max-content);
+      grid-template-rows: repeat(4, max-content);
+  -webkit-box-shadow: 0px -2px 40px 2px #ccc;
+          box-shadow: 0px -2px 40px 2px #ccc;
+}
+
+.kartochka__main img {
+  max-width: 100%;
+}
+
+.kartochka__main .label {
+  color: white;
+  display: inline-block;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  padding: 2px 10px;
+  -webkit-border-radius: 100px;
+          border-radius: 100px;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.kartochka__main .label__vk {
+  background: #000099;
+}
+
+.kartochka__main .label__gift {
+  background: #6666ff;
+}
+
+.kartochka__main h2 {
+  font-size: 40px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin-bottom: 30px;
+}
+
+.kartochka__share {
+  background: white;
+  -webkit-box-shadow: 0px -2px 40px 2px #ccc;
+          box-shadow: 0px -2px 40px 2px #ccc;
+  padding: 20px;
+}
+
+.kartochka__share p {
+  margin: 0 0 10px 0;
+  font-weight: 700;
+}
+
+.kartochka__share .ssilka {
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.kartochka .button {
+  background: darkcyan;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  padding: 7px 20px;
+  -webkit-border-radius: 100px;
+          border-radius: 100px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 991px) {
+  .kartochka__row {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
 }
