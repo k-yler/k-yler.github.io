@@ -1,0 +1,361 @@
+@font-face {
+  font-family: "RalewayRegular";
+  src: url("../fonts/RalewayRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+body {
+  background: url(../img/bg.jpg) center no-repeat;
+  background-size: cover;
+}
+* {
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+.con {
+  width: 1110px;
+  margin: 0 auto;
+  padding: 100px 0 50px;
+  .img {
+    position: absolute;
+    top: 530px;
+    z-index: 99;
+  }
+}
+.slider {
+  flex-direction: column;
+  display: flex;
+}
+.card {
+  padding-bottom: 100px;
+
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  &__one {
+    padding: 30px 10px 0 10px;
+    position: reletive;
+    min-width: 0;
+    .header {
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 24px;
+      padding-bottom: 10px;
+    }
+    .bg {
+      position: absolute;
+
+      height: 150px;
+
+      z-index: -1;
+      background: linear-gradient(to top, rgba(#000, 0.1), rgba(white, 0));
+    }
+  }
+  &__two {
+    margin: 0 10px;
+    padding: 0 10px 30px 10px;
+    box-shadow: 0 0 32px rgba(#000, 0.1);
+    background-color: rgba(#000, 0.1);
+    position: reletive;
+    .bg {
+      height: 150px;
+      background: #000;
+      position: absolute;
+    }
+    .text {
+      margin: 20px 0 0 0;
+      text-transform: uppercase;
+      font-size: 22px;
+    }
+    .price {
+      font-size: 60px;
+      font-weight: 400;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-top: 0;
+      span {
+        font-size: 24px;
+        font-weight: 400;
+        text-decoration: line-through;
+        text-transform: uppercase;
+        vertical-align: top;
+        display: inline-block;
+        margin-top: 17px;
+      }
+    }
+    input {
+      width: 50px;
+    }
+    button {
+      background: none;
+      border: none;
+    }
+    img {
+      padding: 10px 20px;
+      border-radius: 30px;
+      border: 3px solid #fff;
+      transition: 0.3s;
+      &:hover {
+        background: #ff8b24;
+        border-color: #ff8b24;
+      }
+    }
+  }
+}
+.btn {
+  background: red;
+}
+.dropdown {
+  display: block;
+  margin: 0 50px;
+  width: 50px;
+  border-bottom: 3px solid white;
+  &:hover {
+    background: #000;
+  }
+}
+.knopka {
+  &:hover {
+    box-shadow: 0 0 10px rgba(#000, 0.1);
+    background-color: rgba(#000, 0.1);
+  }
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: rgba(255, 255, 255, 0);
+}
+.show {
+  box-shadow: 0 0 10px rgba(#000, 0.1);
+  background-color: rgba(#000, 0.1);
+
+  &:hover {
+    box-shadow: 0 0 10px rgba(#000, 0.1);
+    background-color: rgba(#000, 0.1);
+  }
+}
+.dropdown-menu.show {
+  display: block;
+  box-shadow: 0 0 10px rgba(#000, 0.1);
+  background-color: rgba(#000, 0.1);
+}
+.dropdown-menu {
+  transform: translateX(-100px);
+  height: 142px;
+  overflow-y: scroll;
+
+  .show {
+  }
+  a {
+    display: block;
+    color: white;
+    padding: 7px;
+    text-align: center;
+    margin: 0 60px 0 60px;
+    &:hover {
+      text-decoration: none;
+      color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(#000, 0.1);
+      background-color: rgba(#000, 0.1);
+    }
+  }
+}
+
+.slick-slider.slick-dotted {
+  &:active,
+  &:click,
+  &:focus {
+    outline: none;
+  }
+}
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+}
+
+.slick-slide {
+  &:active {
+    outline: none;
+  }
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.slick-dots li {
+  list-style: none;
+  margin-top: 25px;
+  padding: 3px;
+}
+/* Активная точка */
+.slick-dots li.slick-active button {
+  font-size: 0;
+  width: 23px;
+  height: 17px;
+  border-radius: 100px;
+  background: #fff;
+  border: 3px solid #fff;
+  &:active,
+  &:click,
+  &:focus {
+    outline: none;
+  }
+}
+/* Элемент точки */
+.slick-dots li button {
+  font-size: 0;
+  width: 23px;
+  height: 17px;
+  border-radius: 100px;
+  background: none;
+  border: 3px solid #fff;
+  &:active,
+  &:click,
+  &:focus {
+    outline: none;
+  }
+}
+.slick-slide.slick-active {
+  outline: none;
+}
+
+button {
+  &:active {
+    outline: none;
+  }
+}
+
+.mainmenubtn {
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 20px;
+  margin-top: 20px;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-child {
+  display: none;
+  background-color: black;
+  min-width: 200px;
+}
+.dropdown-child a {
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown:hover .dropdown-child {
+  display: block;
+}
+button {
+  &:active,
+  &:click,
+  &:focus {
+    outline: none;
+  }
+}
+@media (max-width: 1120px) {
+  .con {
+    padding-bottom: 0;
+    .img {
+      width: 990px;
+      top: 655px;
+    }
+    .slick-dots {
+      transform: translateY(-50px);
+      height: 10px;
+      &:click {
+        outline: none;
+      }
+    }
+    max-width: 990px;
+    .card__one {
+      img {
+        width: 250px;
+      }
+    }
+  }
+}
+@media (max-width: 990px) {
+  .con {
+    padding-top: 50px;
+    .img {
+      width: 767px;
+      height: 20px;
+      top: 520px;
+    }
+    max-width: 767px;
+    .card__one {
+      img {
+        width: 200px;
+      }
+    }
+    .card__two {
+      .price {
+        display: block;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .con {
+    .img {
+      width: 500px;
+      height: 20px;
+      top: 615px;
+    }
+    max-width: 500px;
+    .card__one {
+      img {
+        width: 250px;
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .con {
+    .img {
+      width: 400px;
+      top: 600px;
+    }
+    max-width: 400px;
+    .card__one {
+      img {
+        width: 250px;
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  .con {
+    .img {
+      width: 300px;
+      top: 605px;
+    }
+    max-width: 300px;
+    .card__one {
+      img {
+        width: 250px;
+      }
+    }
+  }
+}
