@@ -78,7 +78,9 @@ h1 {
 
 .card__one .bg {
   position: absolute;
+  width: 260px;
   height: 150px;
+  top: 210px;
   z-index: -1;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.1)), to(rgba(255, 255, 255, 0)));
   background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0));
@@ -153,11 +155,23 @@ h1 {
   background: red;
 }
 
+.btn__2 {
+  outline: none;
+}
+
+.btn__2:focus {
+  outline: none;
+}
+
 .dropdown {
   display: block;
   margin: 0 50px;
   width: 50px;
   border-bottom: 3px solid white;
+  outline: none;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .dropdown:hover {
@@ -259,6 +273,7 @@ h1 {
   list-style: none;
   margin-top: 25px;
   padding: 3px;
+  /* outline: none; */
 }
 
 /* Активная точка */
@@ -270,6 +285,7 @@ h1 {
           border-radius: 100px;
   background: #fff;
   border: 3px solid #fff;
+  /* outline: none; */
 }
 
 .slick-dots li.slick-active button:active, .slick-dots li.slick-active button:click, .slick-dots li.slick-active button:focus {
@@ -285,6 +301,7 @@ h1 {
           border-radius: 100px;
   background: none;
   border: 3px solid #fff;
+  outline: none;
 }
 
 .slick-dots li button:active, .slick-dots li button:click, .slick-dots li button:focus {
@@ -292,6 +309,10 @@ h1 {
 }
 
 .slick-slide.slick-active {
+  outline: none;
+}
+
+button {
   outline: none;
 }
 
@@ -334,6 +355,27 @@ button:active, button:click, button:focus {
   outline: none;
 }
 
+.dropdown {
+  font-size: 20px;
+  outline: none;
+}
+
+.dropdown:hover {
+  background: none;
+}
+
+.dropdown:focus, .dropdown:click {
+  outline: none;
+}
+
+.knopka {
+  outline: none;
+}
+
+.knopka:focus, .knopka:click {
+  outline: none;
+}
+
 @media (max-width: 1120px) {
   .con {
     padding-bottom: 0;
@@ -352,6 +394,10 @@ button:active, button:click, button:focus {
   .con .slick-dots:click {
     outline: none;
   }
+  .con .card__one .bg {
+    width: 310px;
+    top: 340px;
+  }
   .con .card__one img {
     width: 250px;
   }
@@ -361,6 +407,10 @@ button:active, button:click, button:focus {
   .con {
     padding-top: 50px;
     max-width: 767px;
+  }
+  .con .card__one .bg {
+    width: 364px;
+    top: 250px;
   }
   .con .img {
     width: 767px;
@@ -379,10 +429,14 @@ button:active, button:click, button:focus {
   .con {
     max-width: 500px;
   }
+  .con .card__one .bg {
+    width: 500px;
+    top: 340px;
+  }
   .con .img {
     width: 500px;
     height: 20px;
-    top: 615px;
+    top: 605px;
   }
   .con .card__one img {
     width: 250px;
