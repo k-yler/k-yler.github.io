@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -263,7 +264,14 @@ section {
   text-align: center;
 }
 
+.gallery img {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
 .gallery__link {
+  /* position: relative; */
+  z-index: 999;
   display: inline-block;
   margin-top: 70px;
   color: #3a3838;
@@ -629,6 +637,17 @@ section {
 }
 
 @media (max-width: 776px) {
+  .header__img {
+    width: 100px;
+  }
+  .header__link {
+    font-size: 14px;
+  }
+  .header .oval {
+    -webkit-transform: translateX(-50%) translateY(-20px);
+        -ms-transform: translateX(-50%) translateY(-20px);
+            transform: translateX(-50%) translateY(-20px);
+  }
   .gallery__block__btn {
     position: relative;
     z-index: 999;
@@ -647,5 +666,202 @@ section {
     margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+/* Слайдер */
+/* Слайдер запущен */
+/* Слайдер с точками */
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden;
+}
+
+/* Лента слайдов */
+.slick-track {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* Слайд */
+.slick-slide:active {
+  outline: none;
+}
+
+/* Слайд активный (показывается) */
+/* Слайд основной */
+/* Слайд по центру */
+/* Клонированный слайд */
+/* Стрелка */
+/* Стрелка влево */
+/* Стрелка вправо */
+/* Стрелка не активная */
+/* Точки (булиты) */
+/* Активная точка */
+/* Элемент точки */
+.slidersone img {
+  width: 100%;
+}
+
+.slidersone__item__block {
+  padding: 20px 0;
+}
+
+.slidersone__item__block .head {
+  color: #161616;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.slidersone__item__block .par {
+  color: #6a6a6a;
+  font-size: 18px;
+}
+
+.slidersone__item__block .plos {
+  margin-top: 50px;
+  color: #8a8a8a;
+  font-size: 18px;
+}
+
+.slidersone__item__block .plos span {
+  color: #161616;
+}
+
+.slidersone__item__block .price {
+  font-size: 18px;
+  color: #8a8a8a;
+}
+
+.slidersone__item__block .price span {
+  color: #161616;
+  font-size: 31px;
+}
+
+.slidersone__item__block .btn {
+  color: white;
+  background-color: #86a642;
+  padding: 12px 50px;
+  -webkit-border-radius: 100px;
+          border-radius: 100px;
+  /* margin-top: 60px; */
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.slidersone__item__block .btn:hover {
+  color: white;
+  background: #77943b;
+  text-decoration: none;
+}
+
+.sliders {
+  position: reletive;
+}
+
+.sliders .hed {
+  text-align: center;
+}
+
+.sliders__header {
+  margin-bottom: 40px;
+  display: inline-block;
+  color: #2e2d2d;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.sliders img {
+  padding: 5px;
+  width: 100%;
+}
+
+.sliders .slidersthree {
+  padding: 0 70px;
+}
+
+.sliders .slidersthree img {
+  width: 100%;
+}
+
+.sliders .slidersthree .slick-next {
+  right: 0;
+  width: 60px;
+  height: 40px;
+  right: 13px;
+  font-size: 0;
+  border: none;
+  background: url(../img/Arrow2.png) center no-repeat;
+}
+
+.sliders .slidersthree .slick-prev {
+  width: 60px;
+  height: 40px;
+  left: 13px;
+  font-size: 0;
+  border: none;
+  background: url(../img/Arrow1.png) center no-repeat;
+}
+
+.sliders .slidersthree .slick-arrow {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+@media (max-width: 465px) {
+  .header {
+    text-align: center;
+    display: block;
+    /* .blokk {
+      color: red;
+      display: block;
+    } */
+  }
+  .header__img {
+    margin: 0 auto;
+    width: 80px;
+    padding: 0;
+    display: block;
+  }
+  .header__link {
+    display: inline-block;
+    /* display: block; */
+    font-size: 14px;
+    padding: 0 20px;
+  }
+  .header .oval {
+    display: none;
+    -webkit-transform: translateX(-50%) translateY(-20px);
+        -ms-transform: translateX(-50%) translateY(-20px);
+            transform: translateX(-50%) translateY(-20px);
+  }
+}
+
+@media (max-height: 600px) {
+  .qq {
+    min-height: 700px;
+  }
+}
+
+@media (max-width: 384px) {
+  .etap .block {
+    margin-bottom: 35px;
+  }
+  .etap .block .right,
+  .etap .block .bottom,
+  .etap .block .left {
+    display: none;
+    /* bottom: 0; */
+    /* transform: translateY(100px) translateX(200px) rotate(90); */
   }
 }

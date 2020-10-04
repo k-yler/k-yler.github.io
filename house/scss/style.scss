@@ -213,7 +213,13 @@ section {
   }
 }
 .gallery {
+  img {
+    width: 100%;
+    padding-bottom: 20px;
+  }
   &__link {
+    /* position: relative; */
+    z-index: 999;
     display: inline-block;
     margin-top: 70px;
     color: #3a3838;
@@ -524,6 +530,17 @@ section {
   }
 }
 @media (max-width: 776px) {
+  .header {
+    &__img {
+      width: 100px;
+    }
+    &__link {
+      font-size: 14px;
+    }
+    .oval {
+      transform: translateX(-50%) translateY(-20px);
+    }
+  }
   .gallery {
     &__block {
       &__btn {
@@ -547,6 +564,209 @@ section {
       margin-bottom: 20px;
       margin-left: auto;
       margin-right: auto;
+    }
+  }
+}
+
+/* Слайдер */
+.slick-slider {
+}
+/* Слайдер запущен */
+.slick-slider.slick-initialized {
+}
+/* Слайдер с точками */
+.slick-slider.slick-dotted {
+}
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track {
+  display: flex;
+}
+/* Слайд */
+.slick-slide {
+  &:active {
+    outline: none;
+  }
+}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active {
+}
+/* Слайд основной */
+.slick-slide.slick-current {
+}
+/* Слайд по центру */
+.slick-slide.slick-center {
+}
+/* Клонированный слайд */
+.slick-slide.slick-cloned {
+}
+/* Стрелка */
+.slick-arrow {
+}
+/* Стрелка влево */
+.slick-arrow.slick-prev {
+}
+/* Стрелка вправо */
+.slick-arrow.slick-next {
+}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled {
+}
+/* Точки (булиты) */
+.slick-dots {
+}
+.slick-dots li {
+}
+/* Активная точка */
+.slick-dots li.slick-active {
+}
+/* Элемент точки */
+.slick-dots li button {
+}
+.slidersone {
+  img {
+    width: 100%;
+  }
+  &__item {
+    &__block {
+      padding: 20px 0;
+      .head {
+        color: #161616;
+        font-size: 24px;
+        font-weight: 400;
+      }
+      .par {
+        color: #6a6a6a;
+        font-size: 18px;
+      }
+      .plos {
+        margin-top: 50px;
+        color: #8a8a8a;
+        font-size: 18px;
+        span {
+          color: #161616;
+        }
+      }
+      .price {
+        font-size: 18px;
+        color: #8a8a8a;
+        span {
+          color: #161616;
+          font-size: 31px;
+        }
+      }
+      .btn {
+        color: white;
+        background-color: $btn;
+        padding: 12px 50px;
+        border-radius: 100px;
+        /* margin-top: 60px; */
+        transition: 0.3s;
+        font-size: 18px;
+        font-weight: 400;
+        text-decoration: none;
+        &:hover {
+          color: white;
+          background: darken($btn, 5%);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+.sliders {
+  .hed {
+    text-align: center;
+  }
+  &__header {
+    margin-bottom: 40px;
+    display: inline-block;
+    color: #2e2d2d;
+    font-size: 32px;
+    font-weight: 400;
+  }
+
+  img {
+    padding: 5px;
+    width: 100%;
+  }
+  position: reletive;
+  .slidersthree {
+    img {
+      width: 100%;
+    }
+    padding: 0 70px;
+    .slick-next {
+      right: 0;
+      width: 60px;
+      height: 40px;
+      right: 13px;
+      font-size: 0;
+      border: none;
+      background: url(../img/Arrow2.png) center no-repeat;
+    }
+    .slick-prev {
+      width: 60px;
+      height: 40px;
+      left: 13px;
+      font-size: 0;
+      border: none;
+      background: url(../img/Arrow1.png) center no-repeat;
+    }
+    .slick-arrow {
+      position: absolute;
+      z-index: 10;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+@media (max-width: 465px) {
+  .header {
+    text-align: center;
+    display: block;
+    /* .blokk {
+      color: red;
+      display: block;
+    } */
+    &__img {
+      margin: 0 auto;
+      width: 80px;
+      padding: 0;
+      display: block;
+    }
+    &__link {
+      display: inline-block;
+      /* display: block; */
+      font-size: 14px;
+      padding: 0 20px;
+    }
+    .oval {
+      display: none;
+      transform: translateX(-50%) translateY(-20px);
+    }
+  }
+}
+
+@media (max-height: 600px) {
+  .qq {
+    min-height: 700px;
+  }
+}
+@media (max-width: 384px) {
+  .etap {
+    .block {
+      margin-bottom: 35px;
+      .right,
+      .bottom,
+      .left {
+        display: none;
+        /* bottom: 0; */
+        /* transform: translateY(100px) translateX(200px) rotate(90); */
+      }
     }
   }
 }
