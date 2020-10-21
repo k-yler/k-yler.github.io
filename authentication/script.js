@@ -15,6 +15,10 @@ let users = [
         userName: "testik",
         userLog: "test",
         userPas: "test",
+    },{
+        userName: "Ваня",
+        userLog: "vanusha",
+        userPas: "sone4ko",
     }
 ];
 
