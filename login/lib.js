@@ -30,6 +30,11 @@ let users = [
         userName: "admin",
         userLogin: "admin",
         userPassword: "admin"
+    },
+    {
+        userName: "Алёна",
+        userLogin: "alena",
+        userPassword: "123456"
     }
 ]
 
