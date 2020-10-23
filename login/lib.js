@@ -32,7 +32,7 @@ let users = [
         userPassword: "admin"
     },
     {
-        userName: "Алёна",
+        userName: "Пупсик",
         userLogin: "alena",
         userPassword: "123456"
     }
