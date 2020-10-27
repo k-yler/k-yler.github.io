@@ -19,6 +19,7 @@ const logInInput = document.querySelector("#login");
 const userName =  document.querySelector(".user-name");
 const buttonOut = document.querySelector(".button-out");
 
+//взять значения из локал сторедж если оно есть, иначе будет нал
 let login = localStorage.getItem('Delivery');
 
 console.log(modalAuth);
@@ -30,6 +31,7 @@ function toggleModalAuth() {
 function autorized() {
 	function logOut() {
 		login = null;
+		//удалить значения из локал сторедж
 		localStorage.removeItem("Delivery");
 		buttonAuth.style.display = "";
 		userName.style.display = "";
@@ -54,11 +56,18 @@ function notAutorized() {
 		// загружаем логин в сторедж, чтобы при перезагрузке не пропадала авторизация
 		localStorage.setItem("Delivery", login);
 
-		toggleModalAuth();
-		buttonAuth.removeEventListener("click", toggleModalAuth);
-		closeAuth.removeEventListener("click", toggleModalAuth);
-		logInForm.removeEventListener("submit", logIn);
-		logInForm.reset();
+		//******************************************************************
+		//если логин есть, разрешить выполнять действия слушателям, если нет, вывести алерт
+		if(login){
+			toggleModalAuth();
+			buttonAuth.removeEventListener("click", toggleModalAuth);
+			closeAuth.removeEventListener("click", toggleModalAuth);
+			logInForm.removeEventListener("submit", logIn);
+			logInForm.reset();
+		} else {
+			alert("Введите логин и пароль")
+		}
+		//*******************************************************************
 		checkAuth();
 	}
   
