@@ -25,7 +25,12 @@ let login = localStorage.getItem('Delivery');
 console.log(modalAuth);
 
 function toggleModalAuth() {
-   modalAuth.classList.toggle("is-open");
+	modalAuth.classList.toggle("is-open");
+	if (modalAuth.classList.contains("is-open")){
+		disableScroll();
+	} else{
+		enableScroll();
+	}
 }
 
 function autorized() {
@@ -74,6 +79,11 @@ function notAutorized() {
 	buttonAuth.addEventListener("click", toggleModalAuth);
 	closeAuth.addEventListener("click", toggleModalAuth);
 	logInForm.addEventListener("submit", logIn);
+	modalAuth.addEventListener("click", function(event){
+		if (event.target.classList.contains("is-open")) {
+			toggleModalAuth();
+		}
+	})
 }
 
 function checkAuth(){
@@ -85,3 +95,15 @@ function checkAuth(){
 }
 
 checkAuth();
+
+function disableScroll() {
+	document.body.style.cssText = `
+	position: relative;
+	overflow: hidden;
+	height: 100vh;
+	`;
+}
+
+function enableScroll() {
+	document.body.style.cssText = ``;
+}
