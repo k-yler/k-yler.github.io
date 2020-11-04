@@ -1,0 +1,409 @@
+.new_header{
+	display: none;
+}
+
+.header{
+	background: #333333;
+	width: 100%;
+	height: 100px;
+
+	display: flex;
+	// grid-template-columns: 1fr 1fr 1fr;
+	// grid-template-rows: 1fr 1fr 1fr;
+	align-items: center;
+  	justify-content: space-between;
+	padding: 0 50px; 
+	.logo{
+		height: 55px;
+	}
+}
+ul{
+	display: flex;
+	a{
+		color: white;
+		margin: 0 5px;
+		font-size: 18px;
+		// color:#e69517;
+		&:hover{
+			color: #e69517;
+		}
+	}
+	.number{
+		margin: 0 10px;
+		font-size: 20px;
+		color: white;
+		font-weight: 500;
+		white-space: nowrap;
+	}
+	.vt{
+		margin: 0 10px;
+	}
+	.link_mail{
+		margin: 0 0 0 10px;
+		color:#e69517;
+		outline: #e69517;
+	}
+}
+.navv_2{
+	align-items: center;
+	text-decoration: none;
+	margin: 0 40px 10px 0;
+	padding: 0;
+	li{
+		list-style-type: none;
+	}
+}
+///////////////////////////////////////////////////////
+@media(max-width:1132px){
+	.header{
+		padding: 0 10px;
+	}
+	ul{
+		.number{
+			font-size: 15px;
+		}
+	}
+}
+@media(max-width:752px){
+	.header{
+		display: none;
+	}
+	.new_header{
+		display: block;
+		.one{
+			background: #333333;
+			color: white;
+			display: flex;
+			padding: 5px 10px;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.two{
+			text-align: center;
+			padding: 5px;
+			img{
+				background: #000;
+			}
+		}
+	}
+}
+
+////////////////////////////////////////////
+.title{
+	font-size: 70px;
+	font-weight: 700;
+}
+.main_section{
+	// height: 100px;
+	// width: 100px;
+	padding-top: 120px;
+	background: url(https://st.depositphotos.com/1008438/1896/i/450/depositphotos_18969841-stock-photo-modern-office-interior.jpg) center no-repeat;
+	background-size: cover;
+
+	text-align: center;
+	.more{
+		display: block;
+		margin: 35px auto;
+	}
+	button{
+		margin-top: 80px;
+		padding: 15px 110px;
+		border: none;
+		color: white;
+		font-size: 20px;
+		font-weight: 500;
+		background: #e69517;
+		box-shadow:1px 0px 80px 1px rgba(230,149,23,0.86);
+	}
+	.num{
+		color: #e69517;
+		font-size: 45px;
+		font-weight: 900;
+		text-shadow: 1px 1px 10px #e69517;
+	}
+	.title{
+		color: #e69517;
+	}
+	.subtitle{
+		font-size: 30px;
+		font-weight: 500;
+		color: white;
+		margin-bottom: 50px;
+	}
+	.podsubtitle{
+		color: white;
+		font-size: 18px;
+	}
+}
+/////////////////////////////////////////////////////////
+@media(max-width: 757px){
+	.main_section{
+		.title{
+			font-size: 60px;
+		}
+		button{
+			padding: 10px 20px;
+		}
+	}
+}
+@media(max-width:576px){
+	.main_section{
+		img{
+			display: none;
+		}
+		padding: 40px 0 20px 0;
+		.title{
+			font-size: 40px;
+		}
+	}
+}
+////////////////////////////////////////////////
+.about{
+	.title{
+		margin: 50px auto;
+		padding: 0 30px;
+		max-width: 1250px;
+	}
+	&-card-block{
+		width: 110%;
+		text-align: center;
+		background: white;
+		box-shadow:1px 0px 21px 0px rgba(0,0,0,0.12);
+		img{
+			width: 100%;
+		}
+		p{
+			padding: 20px 20px 0 20px;
+			font-size: 18px;
+			font-weight: 700;
+		}
+		span{
+			font-size: 22px;
+			font-weight: 700;
+			display: inline-block;
+			margin-bottom: 20px;
+		}
+	}
+	&-card{
+		padding: 10px 20px 0 10px;
+		color: grey;
+		font-size: 19px;
+		position: relative;
+		span{
+			color: #e69517;
+			font-size: 150px;
+			position: absolute;
+			left: -50px;
+			top: 0;
+			line-height: .8;
+		}
+		p{
+			margin-bottom: 35px;
+		}
+	}
+	&-video{
+		.block{
+			display: inline-block;
+			margin-left: 20px;
+			color: black;
+			.one{
+				font-size: 17px;
+				font-weight: 400;
+				margin-bottom: 0px;
+			}
+			.two{
+				font-size: 20px;
+				font-weight: 700;
+			}
+			.three{
+				color: #e69517;
+				font-size: 20px;
+				display: inline-block;
+				border-bottom: 2px solid #e69517;
+				margin-bottom: 35px;
+			}
+		}
+		.play{
+			display: inline-block;
+			width: 100px;
+			height: 100px;
+			background: rgba(230,149,23,0.2);
+			border-radius: 100px;
+			padding: 10px;
+			border: 2px solid #e69517;
+			.play2{
+				width: 100%;
+				height: 100%;
+				border-radius: 100px;
+				background: #e69517;
+				position: relative;
+				.trey{
+					width: 10px;
+					height: 10px;
+					border: 10px solid transparent;
+					 border-top: 10px solid white;
+					// background: #000;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translateX(-5px) translateY(-50%) rotate(-90deg);
+				}
+			}
+		}
+	}
+}
+////////////////////////////////////////////////////////
+@media(max-width: 985px){
+	.about{
+		.title{
+			font-size: 60px;
+		}
+	}
+}
+@media(max-width: 757px){
+	.about{
+		&-card-block{
+			width: 100%;
+			margin-bottom: 30px;
+		}
+		.title{
+			font-size: 60px;
+		}
+		&-video{
+			.one{
+				margin-top: 20px;
+			}
+		}
+	}
+}
+@media(max-width:576px){
+	.about{
+		
+		// padding: 40px 0 20px 0;
+		.title{
+			margin: 30px 0 20px 0;
+			font-size: 40px;
+		}
+	}
+}
+@media(max-width:451px){
+	.about{
+		&-video{
+			.play{
+				padding: 5px;
+				width: 40px;
+				height:40px;
+				.play2{
+					.trey{
+						border: 5px solid transparent;
+						border-top: 5px solid white;
+					}
+				}
+			}
+		}
+	}
+}
+
+//////////////////////////////////////////
+.uslygi{
+	.title{
+		padding-top: 20px;
+	}
+	// width: 1200px;
+	background: #f5f5f5;
+	&-block{
+		margin: 20px 10px 45px 10px;
+		padding: 30px 20px 20px 20px;
+		background: black;
+		position: relative;
+		img{
+			position: absolute;
+			width: 70px;
+			height: 70px;
+			background: #000;
+		}
+	}
+	&-block2{
+		display: inline-block;
+		padding-left: 90px;
+		h4{
+			color: white;
+			font-size: 33px;
+			font-weight: 500;
+		}
+		p{
+			color: grey;
+			font-size: 18px;
+			margin-bottom: 20px;
+			margin-top: 25px;
+		}
+		button{
+			color: #e69517;
+			background: none;
+			border: 2px solid #e69517;
+			font-size: 18px;
+			font-weight: 500;
+			padding: 13px 75px;
+			transition: .6s;
+			&:hover{
+				color: white;
+				background: #e69517;
+			}
+		}
+	}
+}
+/////////////////////////////////////////////////////////////////////////////////////
+@media(max-width: 985px){
+	.uslygi{
+		.title{
+			font-size: 60px;
+		}
+	}
+}
+@media(max-width: 757px){
+	.uslygi{
+		text-align: center;
+		.title{
+			font-size: 60px;
+			text-align: left;
+		}
+		&-block{
+			position: static;
+			img{
+				position: static;
+			}
+		}
+		&-block2{
+			padding: 0;
+			position: static;
+			button{
+				padding: 13px 50px;
+			}
+		}
+	}
+}
+@media(max-width:576px){
+	.uslygi{
+		.title{
+			margin: 30px 0 20px 0;
+			font-size: 40px;
+		}
+	}
+}
+@media(max-width:400px){
+	.main_section{
+		.title{
+			font-size: 35px;
+		}
+	}
+	.uslygi{
+		.title{
+			font-size: 35px;
+		}
+		&-block{
+			button{
+				padding: 13px 20px;
+			}
+		}
+	}
+}
