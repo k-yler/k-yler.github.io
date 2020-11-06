@@ -71,10 +71,15 @@ ul .link_mail {
     display: none;
   }
   .new_header {
+    margin-top: 68px;
     display: block;
   }
   .new_header .one {
+    margin-top: -68px;
     background: #333333;
+    position: fixed;
+    width: 100%;
+    z-index: 99999999;
     color: white;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -87,12 +92,27 @@ ul .link_mail {
         -ms-flex-align: center;
             align-items: center;
   }
+  .new_header .one .dropdown-toggle {
+    background: url("../img/menu.png") center no-repeat;
+    background-size: cover;
+    border: none;
+    height: 30px;
+  }
+  .new_header .one .dropdown-toggle::after {
+    display: none;
+  }
+  .new_header .one .dropdown-menu {
+    background: #24201d;
+  }
+  .new_header .one .dropdown-menu .dropdown-item {
+    color: white;
+  }
+  .new_header .one .icons a img {
+    width: 40px;
+  }
   .new_header .two {
     text-align: center;
     padding: 5px;
-  }
-  .new_header .two img {
-    background: #000;
   }
 }
 .title {
@@ -101,7 +121,7 @@ ul .link_mail {
 }
 .main_section {
   padding-top: 120px;
-  background: url(https://st.depositphotos.com/1008438/1896/i/450/depositphotos_18969841-stock-photo-modern-office-interior.jpg) center no-repeat;
+  background: url(//level.od.ua/wp-content/themes/demo/img/slbg.jpg) center no-repeat;
   background-size: cover;
   text-align: center;
 }
@@ -167,8 +187,6 @@ ul .link_mail {
   width: 110%;
   text-align: center;
   background: white;
-  -webkit-box-shadow: 1px 0px 21px 0px rgba(0, 0, 0, 0.12);
-          box-shadow: 1px 0px 21px 0px rgba(0, 0, 0, 0.12);
 }
 .about-card-block img {
   width: 100%;
@@ -292,14 +310,13 @@ ul .link_mail {
 .uslygi-block {
   margin: 20px 10px 45px 10px;
   padding: 30px 20px 20px 20px;
-  background: black;
+  background: url("https://level.od.ua/wp-content/uploads/2019/11/s1.png");
   position: relative;
 }
 .uslygi-block img {
   position: absolute;
   width: 70px;
   height: 70px;
-  background: #000;
 }
 .uslygi-block2 {
   display: inline-block;
@@ -391,7 +408,7 @@ ul .link_mail {
           box-shadow: 1px 0px 21px 0px rgba(0, 0, 0, 0.5);
 }
 .done_works .block:hover .hover {
-  display: block;
+  opacity: 1;
 }
 .done_works .block .img {
   height: 300px;
@@ -416,8 +433,10 @@ ul .link_mail {
   height: 100%;
   top: 0;
   left: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
   position: absolute;
-  display: none;
+  opacity: 0;
 }
 .done_works .block .hover button {
   color: white;
@@ -557,7 +576,9 @@ ul .link_mail {
 .write_us .text {
   display: inline-block;
   padding: 40px;
-  background: grey;
+  background: white;
+  -webkit-box-shadow: 1px 0px 21px 0px rgba(0, 0, 0, 0.12);
+          box-shadow: 1px 0px 21px 0px rgba(0, 0, 0, 0.12);
 }
 .write_us .text p {
   font-size: 28px;
@@ -1018,4 +1039,82 @@ ul .link_mail {
   .wein {
     display: none;
   }
+}
+.footer {
+  padding: 40px 0;
+  background: #24201d;
+  color: #848484;
+}
+.footer p {
+  font-size: 17px;
+}
+.footer h3 {
+  color: white;
+}
+.footer .palka {
+  width: 120px;
+  height: 2px;
+  background: #e69517;
+  margin: 10px 0 20px;
+}
+.footer .company .webs {
+  margin-bottom: 20px;
+}
+.footer .contacts .adress {
+  margin-left: 40px;
+  position: relative;
+}
+.footer .contacts .adress img {
+  top: 0;
+  left: 0;
+  position: absolute;
+  -webkit-transform: translateX(-60px) translateY(-15px);
+          transform: translateX(-60px) translateY(-15px);
+}
+.footer .contacts .number {
+  color: white;
+  font-weight: 700;
+  font-size: 21px;
+  margin-left: 40px;
+  position: relative;
+}
+.footer .contacts .number img {
+  top: 0;
+  left: 0;
+  position: absolute;
+  -webkit-transform: translateX(-60px) translateY(-15px);
+          transform: translateX(-60px) translateY(-15px);
+}
+.footer .contacts .mail {
+  margin-left: 40px;
+  position: relative;
+}
+.footer .contacts .mail img {
+  top: 0;
+  left: 0;
+  position: absolute;
+  -webkit-transform: translateX(-60px) translateY(-10px);
+          transform: translateX(-60px) translateY(-10px);
+}
+.footer .information a {
+  color: #848484;
+  display: block;
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+.footer .information a:hover {
+  text-decoration: none;
+}
+.footer .information button {
+  margin-top: 30px;
+  display: block;
+  width: 100%;
+  color: white;
+  background: #e69517;
+  border: 2px solid #e69517;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 15px 0;
+  -webkit-box-shadow: 1px 0px 80px 1px rgba(230, 149, 23, 0.86);
+          box-shadow: 1px 0px 80px 1px rgba(230, 149, 23, 0.86);
 }
