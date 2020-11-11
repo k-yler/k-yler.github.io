@@ -6,20 +6,25 @@ let curent = 0;
 let arr = [];
 let temp = JSON.parse(localStorage.getItem('item'));
 if(temp!=null){
-    arr = temp;
-} else{
-    arr = [];
-}
-console.log(arr);
-//если не пустой массив то
-if(arr.length >= 0){
     arr = JSON.parse(localStorage.getItem('item'));
     for (i in arr){
         let tmp = `<li id="todolist${i}"> ${arr[i]}</li>`;
         todo.innerHTML += tmp;
         curent++;
     }
-};
+} else{
+    arr = [];
+}
+// console.log(arr);
+//если не пустой массив то
+// if(arr.length >= 0){
+//     arr = JSON.parse(localStorage.getItem('item'));
+//     for (i in arr){
+//         let tmp = `<li id="todolist${i}"> ${arr[i]}</li>`;
+//         todo.innerHTML += tmp;
+//         curent++;
+//     }
+// };
 
 
 button.addEventListener("click", foo);
@@ -30,11 +35,12 @@ function foo() {
         let tmp = `<li id="todolist${curent}"> ${text.value}</li>`;
         curent++;
         todo.innerHTML += tmp;
+        // console.log(arr);
         arr.push(text.value);
         localStorage.setItem('item', JSON.stringify(arr));
         text.value = "";
     }
-    console.log(JSON.parse(localStorage.getItem('item')));
+    // console.log(JSON.parse(localStorage.getItem('item')));
 };
 
 delButton.addEventListener("click", function() {
