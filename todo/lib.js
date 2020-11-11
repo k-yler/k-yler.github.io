@@ -42,3 +42,16 @@ delButton.addEventListener("click", function() {
     localStorage.clear();
     todo.innerHTML = "";
 });
+
+todo.addEventListener('click', event =>{
+    let id = event.target.id.slice(8);
+    // id = id.slice(8);
+    // console.log(id);
+    // console.log(arr[id]);
+    // console.log(event.target);
+    // arr[id] = NaN;
+    arr.splice(id, 1);
+    event.target.remove();
+    localStorage.setItem('item', JSON.stringify(arr));
+    // console.log(arr);
+});
