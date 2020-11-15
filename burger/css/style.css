@@ -1,0 +1,300 @@
+.navv {
+  width: 100%;
+  padding: 0 10px;
+  position: fixed;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.navv a {
+  font-size: 16px;
+  color: #1F2939;
+}
+.navv a:hover {
+  text-decoration: none;
+}
+.navv .left a {
+  margin-right: 35px;
+}
+.navv .right a {
+  margin-left: 35px;
+}
+.navv .right .a-btn {
+  color: #FF4D4F;
+  background: #FFEDED;
+  padding: 8px 24px;
+  border-radius: 100px;
+}
+.wrapper-one {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+.wrapper-one .text {
+  display: inline-block;
+}
+.wrapper-one .text h2 {
+  font-size: 72px;
+  color: #1F2939;
+}
+.wrapper-one .text p {
+  font-size: 20px;
+  color: #676D77;
+}
+.wrapper-one .burger-par {
+  width: 50%;
+}
+.wrapper-two {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.wrapper-two .text {
+  display: inline-block;
+}
+.wrapper-two .text h2 {
+  font-size: 72px;
+  color: #1F2939;
+}
+.wrapper-two .burger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.wrapper-two .summary {
+  display: inline-block;
+  position: relative;
+}
+.wrapper-two .summary .inf .kcal,
+.wrapper-two .summary .inf .min,
+.wrapper-two .summary .inf .g {
+  display: inline-block;
+  background: #F5F5FF;
+  padding: 5px 10px;
+  border-radius: 100px;
+  margin: 5px;
+}
+.wrapper-two .summary .gift-prew {
+  margin-top: 40px;
+  font-size: 24px;
+}
+.wrapper-two .summary p .bill {
+  position: absolute;
+  z-index: 9990000;
+  left: -150px;
+  font-size: 27px;
+  background: #5243C2;
+  padding: 12px 24px;
+  border-radius: 100px;
+  color: white;
+}
+.items {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.item {
+  width: 130px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 150px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.item img {
+  width: 100%;
+}
+.item .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.item .buttons button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  margin: 0 10px;
+  border-radius: 100px;
+  background: #F5F5FF;
+  position: reletive;
+  z-index: 99999999;
+}
+.item .buttons .disable {
+  background: #ccc;
+  color: grey;
+}
+.gift-gift {
+  display: none;
+}
+.gift-gift .gift-span {
+  color: #FF4D4F;
+  font-size: 27px;
+  font-weight: 700;
+}
+.burger {
+  background: url('img/bg.png') center no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+.img {
+  height: 20px;
+  position: reletive;
+  z-index: 99999;
+}
+.img img {
+  width: 200px;
+}
+.bg {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+}
+@media (max-width: 1050px) {
+  .wrapper-two .text {
+    display: none;
+  }
+}
+.burger-img img {
+  width: 300px;
+  display: block;
+}
+.burger-img .q1,
+.burger-img .q2,
+.burger-img .q3,
+.burger-img .q4,
+.burger-img .q5,
+.burger-img .q6,
+.burger-img .q7,
+.burger-img .q8 {
+  position: absolute;
+}
+.burger-img .q1 {
+  -webkit-transform: translateY(-280px);
+          transform: translateY(-280px);
+}
+.burger-img .q2 {
+  -webkit-transform: translateY(-140px);
+          transform: translateY(-140px);
+}
+.burger-img .q3 {
+  -webkit-transform: translateY(-200px);
+          transform: translateY(-200px);
+}
+.burger-img .q4 {
+  -webkit-transform: translateY(-40px);
+          transform: translateY(-40px);
+}
+.burger-img .q5 {
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+}
+.burger-img .q6 {
+  -webkit-transform: translateY(80px);
+          transform: translateY(80px);
+}
+.burger-img .q7 {
+  -webkit-transform: translateY(120px);
+          transform: translateY(120px);
+}
+.burger-img .q8 {
+  -webkit-transform: translateY(180px);
+          transform: translateY(180px);
+}
+.order {
+  position: absolute;
+  -webkit-transform: translateY(50px) translateX(50px);
+          transform: translateY(50px) translateX(50px);
+  background: #BE2B20;
+  padding: 5px 15px;
+  border-radius: 100px;
+  color: white;
+  border: none;
+}
+button:focus,
+button:active {
+  outline: none;
+}
+.modal {
+  position: absolute;
+  display: none;
+  -webkit-transition: 1s;
+  transition: 1s;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: white;
+  z-index: 999999999999;
+  text-align: center;
+  padding-top: 150px;
+  font-weight: 500;
+}
+.modal p {
+  font-size: 72px;
+}
+.modal .button-mail {
+  background: #FFEDED;
+  padding: 5px 20px;
+  border-radius: 100px;
+  color: #FF4D4F;
+  border: none;
+  font-size: 30px;
+  font-weight: 500;
+}
+.modal .button-ok {
+  background: #BE2B20;
+  padding: 5px 20px;
+  border-radius: 100px;
+  color: white;
+  border: none;
+  font-size: 30px;
+  font-weight: 500;
+}
+.modal button {
+  margin: 40px;
+}
