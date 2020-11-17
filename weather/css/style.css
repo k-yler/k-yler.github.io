@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: white;
+    font-size: 30px;
+}
+
+.container{
+    /* background: pink; */
+    background: linear-gradient(180deg, #00c6fb, #005bea);
+    width: 100vw;
+    /* width: 50%; */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.wrapper{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    width: 50%;
+    margin: 0 auto;
+}
+.celsius, .degree{
+    font-size: 25px;
+}
+.degree-block{
+    /* font-size: 25px; */
+    /* display: flex; */
+    align-items: center;
+}
