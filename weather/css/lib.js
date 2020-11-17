@@ -1,0 +1,33 @@
+let long;
+let lat;
+// let inf;
+
+let nav = navigator.geolocation.getCurrentPosition(pos => {
+    lat = pos.coords.latitude;
+    console.log(lat);
+    long = pos.coords.longitude
+    console.log(long);
+    let apiKey = '8c6382a4c537bb614eb1ac5d1a8bea31';
+    let proxy = `https://cors-anywhere.herokuapp.com/`
+    let api = `${proxy}api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&lang=en`;
+    try{
+        fetch(api).then(response =>{
+            return response.json().then(data => {
+                // console.log(data.weather);
+                showWeather(data);
+            })
+        })
+    } catch (e){
+        console.log(e);
+    }
+});
+// андерскор лодаш
+
+function showWeather(data){
+    console.log(data);
+    let body = document.querySelector("body");
+    body.innerHTML += JSON.stringify(data.weather[0].main);
+    body.innerHTML += JSON.stringify(data.weather[0].description);
+    body.innerHTML += JSON.stringify(data.main.temp);
+    body.innerHTML += JSON.stringify(data.name)
+}
