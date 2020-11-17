@@ -1,6 +1,9 @@
 let long;
 let lat;
-// let inf;
+let degree = document.querySelector(".degree");
+let sity = document.querySelector(".sity");
+let weather = document.querySelector(".weather");
+// console.log(degree, sity, weather); 
 
 let nav = navigator.geolocation.getCurrentPosition(pos => {
     lat = pos.coords.latitude;
@@ -25,9 +28,11 @@ let nav = navigator.geolocation.getCurrentPosition(pos => {
 
 function showWeather(data){
     console.log(data);
-    let body = document.querySelector("body");
-    body.innerHTML += JSON.stringify(data.weather[0].main);
-    body.innerHTML += JSON.stringify(data.weather[0].description);
-    body.innerHTML += JSON.stringify(data.main.temp);
-    body.innerHTML += JSON.stringify(data.name)
+    // let body = document.querySelector("body");
+    // body.innerHTML += JSON.stringify(data.weather[0].main);
+    weather.innerHTML = JSON.stringify(data.weather[0].description).replace(/"/g, "");
+    let tmp = JSON.stringify(data.main.temp);
+    tmp = Number(tmp).toFixed()-273;
+    degree.innerHTML = tmp
+    sity.innerHTML = JSON.stringify(data.name).replace(/"/g, "");
 }
