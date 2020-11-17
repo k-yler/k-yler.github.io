@@ -12,7 +12,7 @@ let nav = navigator.geolocation.getCurrentPosition(pos => {
     console.log(long);
     let apiKey = '8c6382a4c537bb614eb1ac5d1a8bea31';
     let proxy = `https://cors-anywhere.herokuapp.com/`
-    let api = `${proxy}api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&lang=en`;
+    let api = `api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&lang=en`;
     try{
         fetch(api).then(response =>{
             return response.json().then(data => {
