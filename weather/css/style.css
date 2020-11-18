@@ -13,18 +13,12 @@
     width: 100vw;
     /* width: 50%; */
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    display: grid;
     align-items: center;
+    justify-content: center;
+    text-align: center;
 }
-.wrapper{
-    display: flex;
-    /* flex-direction: column; */
-    justify-content: space-between;
-    width: 50%;
-    margin: 0 auto;
-}
+
 .celsius, .degree{
     font-size: 25px;
 }
@@ -32,4 +26,23 @@
     /* font-size: 25px; */
     /* display: flex; */
     align-items: center;
+}
+input{
+    background: #005bea;
+    border: 2px solid white;
+    color: white;
+    padding: 5px 10px;
+    border-radius:10px;
+    font-size: 20px;
+}
+input::placeholder{
+    color: white;
+}
+button{
+    margin-top: 10px;
+    font-size: 20px;
+    background: #005bea;
+    border: 2px solid White;
+    padding: 5px 10px;
+    border-radius: 10px;
 }
