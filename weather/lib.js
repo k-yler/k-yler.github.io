@@ -1,8 +1,15 @@
 let long;
 let lat;
+let apiKey = '8c6382a4c537bb614eb1ac5d1a8bea31';
 let degree = document.querySelector(".degree");
 let sity = document.querySelector(".sity");
 let weather = document.querySelector(".weather");
+let region = document.querySelector(".region");
+let input = document.querySelector("input");
+let loading = document.querySelector(".loading");   
+let arr = [];
+// arr = arr.slice(0, 3);
+// console.log(arr);
 // console.log(degree, sity, weather); 
 
 let nav = navigator.geolocation.getCurrentPosition(pos => {
@@ -10,51 +17,68 @@ let nav = navigator.geolocation.getCurrentPosition(pos => {
     console.log(lat);
     long = pos.coords.longitude
     console.log(long);
-    let apiKey = '8c6382a4c537bb614eb1ac5d1a8bea31';
-    let proxy = `https://cors-anywhere.herokuapp.com/`;
-    let api = `${proxy}api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&lang=en`;
-    try{
-        fetch(api).then(response =>{
-            return response.json().then(data => {
-                // console.log(data.weather);
-                showWeather(data);
-            })
-        })
-    } catch (e){
-        console.log(e);
-    }
+    let api = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&lang=en`;
+    getData(api);
 });
 // андерскор лодаш
 
 function showWeather(data){
-    console.log(data);
-    // let body = document.querySelector("body");
-    // body.innerHTML += JSON.stringify(data.weather[0].main);
     weather.innerHTML = JSON.stringify(data.weather[0].description).replace(/"/g, "");
     let tmp = JSON.stringify(data.main.temp);
     tmp = Number(tmp).toFixed()-273;
     degree.innerHTML = " " + tmp;
     sity.innerHTML = JSON.stringify(data.name).replace(/"/g, "");
+    region.innerHTML = JSON.stringify(data.sys.country).replace(/"/g, " ");
 }
 
 function showWeatherOfSity(){
-    let apiKey = '8c6382a4c537bb614eb1ac5d1a8bea31';
-    let proxy = `https://cors-anywhere.herokuapp.com/`
-    let cityName = document.querySelector("input").value;
-    let api = `${proxy}api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`;
-    try{
-        fetch(api).then(response =>{
-            return response.json().then(data => {
-                showWeather(data);
-                console.log(data);
-            })
-        })
-    } catch (e){
-        console.log(e);
-    }
+    let cityName = document.querySelector("input");
+    let api = `http://api.openweathermap.org/data/2.5/weather?q=${cityName.value.trim()}&appid=${apiKey}`;
+    getData(api, cityName.value.trim());
 }
-// showWeatherOfSity();
+
+function getData(api, name = undefined){
+    loading.style.opacity = 1;
+    fetch(api).then(response => {
+        return response.json()
+    }).then(data=> {
+        console.log(data);
+        if(data.cod == 404){
+            alert("I couldn't find this city. Try again");
+            loading.style.opacity = 0;
+        } else {
+            showWeather(data);
+            loading.style.opacity = 0;
+            if(name != undefined){
+                forArr(name);
+            }
+        }
+    })
+}
 
 document.querySelector("button").addEventListener("click", showWeatherOfSity);
 
+let list = document.querySelector(".list");
+
+list.addEventListener("click", event=>{
+    let city = event.target.innerHTML
+    console.log(city);
+    let api = `http://api.openweathermap.org/data/2.5/weather?q=${city.trim()}&appid=${apiKey}`;
+    getData(api);
+});
+
+function forArr(newCity){
+    arr.unshift(newCity);
+    // console.log(arr);
+
+    if(arr.length == 4){
+        arr.pop();
+    }
+    console.log(arr);
+    list.innerHTML = "";
+    for(let i = 0; i < arr.length; i++){
+        let tmp = `<p>${arr[i]}</p>`
+        list.innerHTML += tmp;
+    }
+}
 
