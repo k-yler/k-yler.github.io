@@ -17,7 +17,7 @@ let nav = navigator.geolocation.getCurrentPosition(pos => {
     console.log(lat);
     long = pos.coords.longitude
     console.log(long);
-    let api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&lang=en`;
+    let api = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&lang=en`;
     getData(api);
 });
 // андерскор лодаш
@@ -29,6 +29,12 @@ function showWeather(data){
     degree.innerHTML = " " + tmp;
     sity.innerHTML = JSON.stringify(data.name).replace(/"/g, "");
     region.innerHTML = JSON.stringify(data.sys.country).replace(/"/g, " ");
+    let icon = data.weather[0].icon;
+    console.log(icon);
+    let img = document.querySelector(".img");
+    console.log(img);
+    img.src  = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+    console.log(img);
 }
 
 function showWeatherOfSity(){
@@ -42,7 +48,7 @@ function getData(api, name = undefined){
     fetch(api).then(response => {
         return response.json()
     }).then(data=> {
-        console.log(data);
+        // console.log(data);
         if(data.cod == 404){
             alert("I couldn't find this city. Try again");
             loading.style.opacity = 0;
@@ -63,7 +69,7 @@ let list = document.querySelector(".list");
 list.addEventListener("click", event=>{
     let city = event.target.innerHTML
     console.log(city);
-    let api = `https://api.openweathermap.org/data/2.5/weather?q=${city.trim()}&appid=${apiKey}`;
+    let api = `http://api.openweathermap.org/data/2.5/weather?q=${city.trim()}&appid=${apiKey}`;
     getData(api);
 });
 
