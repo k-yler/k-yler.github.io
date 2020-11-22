@@ -41,6 +41,7 @@ function showWeatherOfSity(){
     let cityName = document.querySelector("input");
     let api = `https://api.openweathermap.org/data/2.5/weather?q=${cityName.value.trim()}&appid=${apiKey}`;
     getData(api, cityName.value.trim());
+    cityName.value = "";
 }
 
 function getData(api, name = undefined){
@@ -65,6 +66,12 @@ function getData(api, name = undefined){
 document.querySelector("button").addEventListener("click", showWeatherOfSity);
 
 let list = document.querySelector(".list");
+
+document.addEventListener("keydown", event => {
+    if(event.keyCode == 13){
+        showWeatherOfSity();
+    }
+})
 
 list.addEventListener("click", event=>{
     let city = event.target.innerHTML
