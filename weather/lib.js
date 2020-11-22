@@ -17,7 +17,7 @@ let nav = navigator.geolocation.getCurrentPosition(pos => {
     console.log(lat);
     long = pos.coords.longitude
     console.log(long);
-    let api = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&lang=en`;
+    let api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&lang=en`;
     getData(api);
 });
 // андерскор лодаш
@@ -69,7 +69,7 @@ let list = document.querySelector(".list");
 list.addEventListener("click", event=>{
     let city = event.target.innerHTML
     console.log(city);
-    let api = `http://api.openweathermap.org/data/2.5/weather?q=${city.trim()}&appid=${apiKey}`;
+    let api = `https://api.openweathermap.org/data/2.5/weather?q=${city.trim()}&appid=${apiKey}`;
     getData(api);
 });
 
