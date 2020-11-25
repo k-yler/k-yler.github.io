@@ -1,0 +1,112 @@
+.container .card-weather {
+  text-align: center;
+  max-width: 450px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 10px;
+  padding-top: 10px;
+}
+.container .card-weather .header {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 10fr 1fr;
+  display: none;
+}
+.container .card-weather-main {
+  background: -webkit-gradient(linear, left top, left bottom, from(#18a1da), to(#2886d8));
+  background: linear-gradient(180deg, #18a1da, #2886d8);
+  color: white;
+  display: grid;
+  grid-gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.container .card-weather-main .city {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0px;
+}
+.container .card-weather-main .wrapper-cel-img {
+  font-size: 40px;
+  font-weight: 700;
+  width: 50%;
+  margin: 0 auto;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-template-columns: 1fr 1fr;
+}
+.container .card-weather-main .wrapper-cel-img .grid-child {
+  justify-self: center;
+}
+.container .card-weather-main .description {
+  font-weight: 700;
+  font-size: 20px;
+}
+.container .card-weather-main .feel {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  font-weight: 500;
+}
+.container .card-weather .subtitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.container .card-weather .subtitle .block {
+  display: grid;
+  justify-items: center;
+}
+.container .card-weather .subtitle .block img {
+  width: 40px;
+}
+.container .card-weather .subtitle .block span {
+  font-weight: 500;
+  font-size: 14px;
+}
+.container .card-weather-other {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  font-weight: 600;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.container .card-weather-other .card-day {
+  border-bottom: 2px solid black;
+  padding: 10px;
+  background: #ccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.container .card-weather-other .card-day:last-child {
+  border: none;
+}
+.container .card-weather-other .card-day p {
+  text-align: left;
+  margin: 0;
+}
+.container .card-weather-other .card-day-text .date {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+}
+.container .card-weather-other .card-day-text .week-day {
+  font-weight: 700;
+  font-size: 20px;
+}
+.container .card-weather-other .card-day-celsius {
+  font-size: 25px;
+  font-weight: 700;
+}
