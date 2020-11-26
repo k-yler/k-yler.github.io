@@ -10,8 +10,26 @@
         .header{
             display: grid;
             grid-gap: 10px;
-            grid-template-columns: 10fr 1fr;
-            display: none;
+            grid-template-columns: 1fr 10fr 1fr;
+            .favorite, .get{
+				border: none;
+				background: none;
+				img{
+					width: 100%;
+				}
+				&:active{
+					outline: none;
+				}
+            }
+            
+            input{
+                border-radius: 10px;
+                padding: 0 10px;
+                border-color: royalblue;
+                &:focus{
+                    outline: none;
+                }
+            }
         }
 
         &-main{
@@ -103,7 +121,6 @@
     }
     
 }
-
 
 .loading{
     background: rgba(255, 255, 255, 0.5);
