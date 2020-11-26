@@ -25,19 +25,30 @@ function error() {
 }
 
 const startApp = (lat, long) =>{
-    const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&appid=${APIKEY}`;
+    // const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&appid=${APIKEY}`;
+    const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&exclude=minutely,hourly&appid=${APIKEY}`;
     getData(url);
 }
 
 button.addEventListener("click", changeCountry);
-function changeCountry() {
+async function changeCountry() {
     const input = document.querySelector("input");
     if(input.value){
         console.log(111);
         console.log(input.value);
         const url = `https://api.openweathermap.org/data/2.5/forecast?q=${input.value.trim()}&appid=${APIKEY}`;
         input.value = "";
-        getData(url);    
+        let lat;
+        let long;
+        await fetch(url).then(r=>r.json()).then(data=>{
+            console.log(data.city.coord);
+            lat = data.city.coord.lat;
+            long = data.city.coord.lon;
+        })
+        // let url2 = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&appid=${APIKEY}`;
+        let tempUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&exclude=minutely,hourly&appid=${APIKEY}`;
+        // console.log(url2);
+        getData(tempUrl);    
     }
 }
 document.addEventListener("keydown", function (e){
@@ -52,28 +63,75 @@ const getData = url => {
             console.log("I couldn't find this city");
         } else {
             // console.log("done");
-            console.log(data);
-            // console.log(createWeather(data));
-            renderMainCard(createWeather(data));
+            // console.log(data);
+            createWeather(data).then(q=>{
+                console.log(q);
+                console.log(data.daily);
+                renderMainCard(q)
+            });
+            // createWeather(data).then(q=>console.log(q));
+            // renderMainCard(createWeather(data));
         }
     });
 }
 
-const createWeather = data => {
-    const sunriseD = new Date(data.city.sunrise * 1000);
-    const sunsetD = new Date(data.city.sunset * 1000);
-    return {
+async function createWeather(data) {
+    let sunriseD = new Date(data.current.sunrise*1000)
+    // let tmp;
+    const sunsetD = new Date(data.current.sunset * 1000);
+    // console.log(sunriseD);
+    const latitude = data.lat;
+    const longitude = data.lon;
+    let nameCity;
+    const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${APIKEY}`;
+
+    // console.log(sunriseD);
+    await fetch(url).then(r=>r.json()).then(q=>{
+        nameCity = `${q.city.country}, ${q.city.name}`
+        // console.log(q.city.sunrise);
+        // tmp = q.city.sunrise * 1000;
+        // sunriseD = new Date(q.city.sunrise * 1000);
+    });
+    // console.log(tmp);
+    // let sunriseD = new Date(tmp);
+    // console.log(sunriseD);
+    const weather = {
         sunrise: `${sunriseD.getHours()<10 ? "0" + sunriseD.getHours() : sunriseD.getHours()}:${sunriseD.getMinutes()<10 ? "0" + sunriseD.getMinutes() : sunriseD.getMinutes()}`,
         sunset: `${sunsetD.getHours()<10 ? "0" + sunsetD.getHours() : sunsetD.getHours()}:${sunsetD.getMinutes()<10 ? "0" + sunsetD.getMinutes() : sunsetD.getMinutes()}`,
-        name: data.city.name,
-        country: data.city.country,
-        pressure: (data.list[0].main.pressure / 1.3333).toFixed(),
-        feelsTemp: data.list[0].main.feels_like.toFixed()-273,
-        temp: data.list[0].main.temp.toFixed()-273,
-        description: data.list[0].weather[0].description,
-        icon: ICONS[data.list[0].weather[0].icon],
-        wind: data.list[0].wind.speed + "m/s"
+        lat: latitude,
+        long: longitude,
+        name: nameCity,
+        pressure: (data.current.pressure/1.3333).toFixed(),
+        feelsTemp: data.current.feels_like.toFixed()-273,
+        temp: data.current.temp.toFixed()-273,
+        description: data.current.weather[0].description,
+        icon: ICONS[data.current.weather[0].icon],
+        wind: data.current.wind_speed + "m/s",
+        daily: []
     }
+    // console.log(data.daily[6]);
+    for( let i = 1; i < 6; i++) {
+        weather.daily.push({
+            dt: data.daily[i].dt,
+            temp: data.daily[i].temp.day.toFixed()-273,
+            icon: ICONS[data.daily[i].weather[0].icon]
+        })
+    }
+
+
+    return weather;
+        // sunrise: `${sunriseD.getHours()<10 ? "0" + sunriseD.getHours() : sunriseD.getHours()}:${sunriseD.getMinutes()<10 ? "0" + sunriseD.getMinutes() : sunriseD.getMinutes()}`,
+        // sunset: `${sunsetD.getHours()<10 ? "0" + sunsetD.getHours() : sunsetD.getHours()}:${sunsetD.getMinutes()<10 ? "0" + sunsetD.getMinutes() : sunsetD.getMinutes()}`,
+        // lat: latitude,
+        // long: longitude,
+        // name: nameCity,
+        // pressure: (data.current.pressure/1.3333).toFixed(),
+        // feelsTemp: data.current.feels_like.toFixed()-273,
+        // temp: data.current.temp.toFixed()-273,
+        // description: data.current.weather[0].description,
+        // icon: ICONS[data.current.weather[0].icon],
+        // wind: data.current.wind_speed + "m/s"
+    
 }
 
 const renderMainCard = weather => {
@@ -86,8 +144,9 @@ const renderMainCard = weather => {
     const pressure = document.querySelector(".pressure");
     const wind = document.querySelector(".wind");
     const sunset = document.querySelector(".sunset");
+    const daily = document.querySelector(".card-weather-other");
     // console.log(degree);
-    city.innerHTML = `${weather.country}, ${weather.name}`;
+    city.innerHTML = weather.name;
     degree.innerHTML = weather.temp;
     description.innerHTML = weather.description;
     feelsLike.innerHTML = weather.feelsTemp;
@@ -95,7 +154,19 @@ const renderMainCard = weather => {
     sunrise.innerHTML = weather.sunrise;
     sunset.innerHTML = weather.sunset;
     pressure.innerHTML = weather.pressure;
-    // console.log(weather.icon, " icon");
+
+    daily.innerHTML = "";
+    for(let i = 0; i<weather.daily.length; i++){
+        let day = new Date(weather.daily[i].dt*1000)        
+        daily.innerHTML += `<div class="card-day">
+        <div class="card-day-text">
+            <p class="date">${mouth[day.getMonth()]} ${day.getDate()} </p>
+            <p class="week-day">${dayOfWeek[day.getDay()]}</p>
+        </div>
+        <div class="card-day-img"><img src="img/icon.png" alt=""></div>
+        <div class="card-day-celsius"><span class="day-celsius">${weather.daily[i].temp}</span>&deg;</div>
+    </div>`;
+    }
 
     var skycons = new Skycons({"color": "white"});
     skycons.add("icon1", weather.icon);
