@@ -95,6 +95,7 @@ async function createWeather(data) {
     // console.log(tmp);
     // let sunriseD = new Date(tmp);
     // console.log(sunriseD);
+    console.log(data);
     const weather = {
         sunrise: `${sunriseD.getHours()<10 ? "0" + sunriseD.getHours() : sunriseD.getHours()}:${sunriseD.getMinutes()<10 ? "0" + sunriseD.getMinutes() : sunriseD.getMinutes()}`,
         sunset: `${sunsetD.getHours()<10 ? "0" + sunsetD.getHours() : sunsetD.getHours()}:${sunsetD.getMinutes()<10 ? "0" + sunsetD.getMinutes() : sunsetD.getMinutes()}`,
@@ -111,6 +112,7 @@ async function createWeather(data) {
     }
     // console.log(data.daily[6]);
     for( let i = 1; i < 6; i++) {
+        console.log(data.daily[i].weather[0].icon);
         weather.daily.push({
             dt: data.daily[i].dt,
             temp: data.daily[i].temp.day.toFixed()-273,
@@ -136,6 +138,7 @@ async function createWeather(data) {
 
 const renderMainCard = weather => {
     // console.log(weather);
+    // console.log(weather.daily[1].icon);
     const city = document.querySelector(".city");
     const degree = document.querySelector(".сelsius");
     const description = document.querySelector(".description");
@@ -163,13 +166,18 @@ const renderMainCard = weather => {
             <p class="date">${mouth[day.getMonth()]} ${day.getDate()} </p>
             <p class="week-day">${dayOfWeek[day.getDay()]}</p>
         </div>
-        <div class="card-day-img"><img src="img/icon.png" alt=""></div>
+        <div class="card-day-img"><canvas id="icon${i}" width="50" height="50"></canvas></div>
         <div class="card-day-celsius"><span class="day-celsius">${weather.daily[i].temp}</span>&deg;</div>
     </div>`;
     }
 
     var skycons = new Skycons({"color": "white"});
-    skycons.add("icon1", weather.icon);
+    skycons.add("icon", weather.icon);
+    skycons.play();
+    skycons = new Skycons({"color": "rgb(24, 161, 218)"})
+    for(let k = 0; k < weather.daily.length; k++){
+        skycons.add(`icon${k}`, weather.daily[k].icon);
+    }
     // console.log(tmp);
     skycons.play();
     loadStop();
