@@ -1,5 +1,6 @@
 const APIKEY = '8c6382a4c537bb614eb1ac5d1a8bea31';
 let load = document.querySelector(".loading");
+const warning = document.querySelector(".warning");
 const button = document.querySelector(".get");
 const ICONS = {
     '01d': Skycons.CLEAR_DAY, '01n': Skycons.CLEAR_NIGHT, '02d': Skycons.PARTLY_CLOUD_DAY, '02n': Skycons.PARTLY_CLOUD_NIGHT, '03d': Skycons.CLOUDY, '03n': Skycons.CLOUDY, '04d': Skycons.CLOUDY, '04n': Skycons.CLOUDY, '09d': Skycons.SLEET, '09n': Skycons.SLEET, '10d': Skycons.RAIN, '10n': Skycons.RAIN, "11d":Skycons.RAIN,"11n": Skycons.RAIN, "13n": Skycons.SNOW, "13d": Skycons.SNOW, "50n": Skycons.FOG, "50d": Skycons.FOG
@@ -22,6 +23,7 @@ function success(position) {
 
 function error() {
     console.log('Unable to retrieve your location');
+    showNotFound();
 }
 
 const startApp = (lat, long) =>{
@@ -41,14 +43,18 @@ async function changeCountry() {
         let lat;
         let long;
         await fetch(url).then(r=>r.json()).then(data=>{
-            console.log(data.city.coord);
-            lat = data.city.coord.lat;
-            long = data.city.coord.lon;
-        })
-        // let url2 = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&appid=${APIKEY}`;
-        let tempUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&exclude=minutely,hourly&appid=${APIKEY}`;
-        // console.log(url2);
-        getData(tempUrl);    
+            console.log(data);
+            if(data.cod == 404){
+                console.log(222222);
+                alert("I could't find this city")
+            } else {
+                console.log(data.city.coord);
+                lat = data.city.coord.lat;
+                long = data.city.coord.lon;
+                let tempUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&exclude=minutely,hourly&appid=${APIKEY}`;
+                getData(tempUrl);  
+            }
+        })   
     }
 }
 document.addEventListener("keydown", function (e){
@@ -188,4 +194,10 @@ const loadPlay = () =>{
 }
 const loadStop = () => {
     load.style.display = "none";
+}
+const showNotFound = () => {
+    warning.style.display = "block";
+}
+const closeNotFound = () => {
+    warning.style.display = "none";
 }

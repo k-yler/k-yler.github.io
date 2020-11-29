@@ -38,7 +38,8 @@
             display: grid;
             grid-gap: 10px;
             padding: 10px;
-            border-radius: 10px;
+			border-radius: 10px;
+			position: relative;
             .city{
                 font-size: 40px;
                 font-weight: 700;
@@ -65,7 +66,18 @@
                 color: rgba(255, 255, 255, 0.5);
                 font-size: 20px;
                 font-weight: 500;
-            }
+			}
+			.warning{
+				display: none;
+				width: 100%;
+				padding: 40px;
+				background: rgb(220, 20, 60);
+				position: absolute;
+				font-size: 20px;
+				font-weight: 500;
+				top: 50%;
+				transform: translateY(-50%)
+			}
         }
         .subtitle{
             display: flex;
@@ -93,7 +105,7 @@
 			overflow: hidden;
 			box-shadow:0px 0px 5px 0px rgba(0, 0, 0, 0.2);
             .card-day{
-                border-bottom: 2px solid black;
+                border-bottom: 2px solid rgb(24, 161, 218);
 				padding: 10px;
 				// box-shadow:0px 0px 5px 0px rgba(0, 0, 0, 0.2);
                 // background: #ccc;

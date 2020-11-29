@@ -40,6 +40,7 @@
   grid-gap: 10px;
   padding: 10px;
   border-radius: 10px;
+  position: relative;
 }
 .container .card-weather-main .city {
   font-size: 40px;
@@ -72,6 +73,18 @@
   font-size: 20px;
   font-weight: 500;
 }
+.container .card-weather-main .warning {
+  display: none;
+  width: 100%;
+  padding: 40px;
+  background: #dc143c;
+  position: absolute;
+  font-size: 20px;
+  font-weight: 500;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
 .container .card-weather .subtitle {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -103,7 +116,7 @@
           box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
 }
 .container .card-weather-other .card-day {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #18a1da;
   padding: 10px;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
