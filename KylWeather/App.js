@@ -3,7 +3,7 @@ let load = document.querySelector(".loading");
 const warning = document.querySelector(".warning");
 const button = document.querySelector(".get");
 const ICONS = {
-    '01d': Skycons.CLEAR_DAY, '01n': Skycons.CLEAR_NIGHT, '02d': Skycons.PARTLY_CLOUD_DAY, '02n': Skycons.PARTLY_CLOUD_NIGHT, '03d': Skycons.CLOUDY, '03n': Skycons.CLOUDY, '04d': Skycons.CLOUDY, '04n': Skycons.CLOUDY, '09d': Skycons.SLEET, '09n': Skycons.SLEET, '10d': Skycons.RAIN, '10n': Skycons.RAIN, "11d":Skycons.RAIN,"11n": Skycons.RAIN, "13n": Skycons.SNOW, "13d": Skycons.SNOW, "50n": Skycons.FOG, "50d": Skycons.FOG
+    '01d': Skycons.CLEAR_DAY, '01n': Skycons.CLEAR_NIGHT, '02d': Skycons.PARTLY_CLOUDY_DAY, '02n': Skycons.PARTLY_CLOUDY_NIGHT, '03d': Skycons.CLOUDY, '03n': Skycons.CLOUDY, '04d': Skycons.CLOUDY, '04n': Skycons.CLOUDY, '09d': Skycons.SLEET, '09n': Skycons.SLEET, '10d': Skycons.RAIN, '10n': Skycons.RAIN, "11d":Skycons.RAIN,"11n": Skycons.RAIN, "13n": Skycons.SNOW, "13d": Skycons.SNOW, "50n": Skycons.FOG, "50d": Skycons.FOG
 };
 const dayOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thusday', 'Friday', "Saturday"];
 const mouth = ['Jun', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
