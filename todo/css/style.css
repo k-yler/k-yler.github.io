@@ -25,6 +25,9 @@ ul{
 li{
   padding: 5px;
 }
+li:hover{
+  cursor: pointer;
+}
 .rows{
   align-self: start;
 }

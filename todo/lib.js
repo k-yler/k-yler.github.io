@@ -15,32 +15,24 @@ if(temp!=null){
 } else{
     arr = [];
 }
-// console.log(arr);
-//если не пустой массив то
-// if(arr.length >= 0){
-//     arr = JSON.parse(localStorage.getItem('item'));
-//     for (i in arr){
-//         let tmp = `<li id="todolist${i}"> ${arr[i]}</li>`;
-//         todo.innerHTML += tmp;
-//         curent++;
-//     }
-// };
 
+button.addEventListener("click", addTodo);
+document.addEventListener("keydown", event => {
+    if(event.keyCode === 13){
+        addTodo()
+    }
+})
 
-button.addEventListener("click", foo);
-
-function foo() {
+function addTodo() {
     let text = document.querySelector("#textArea");
-    if(text.value){
+    if(text.value.trim()){
         let tmp = `<li id="todolist${curent}"> ${text.value}</li>`;
         curent++;
         todo.innerHTML += tmp;
-        // console.log(arr);
         arr.push(text.value);
         localStorage.setItem('item', JSON.stringify(arr));
         text.value = "";
     }
-    // console.log(JSON.parse(localStorage.getItem('item')));
 };
 
 delButton.addEventListener("click", function() {
@@ -51,13 +43,7 @@ delButton.addEventListener("click", function() {
 
 todo.addEventListener('click', event =>{
     let id = event.target.id.slice(8);
-    // id = id.slice(8);
-    // console.log(id);
-    // console.log(arr[id]);
-    // console.log(event.target);
-    // arr[id] = NaN;
     arr.splice(id, 1);
     event.target.remove();
     localStorage.setItem('item', JSON.stringify(arr));
-    // console.log(arr);
 });
