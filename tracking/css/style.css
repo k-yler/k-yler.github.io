@@ -1,0 +1,68 @@
+.container {
+  padding-top: 50px;
+}
+.container h3 {
+  text-align: center;
+}
+.container .wrapper {
+  width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 50px 0;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.container .wrapper .piva {
+  margin: 20px 0 ;
+  width: 200px;
+  height: 365px;
+  position: relative;
+  overflow: hidden;
+}
+.container .wrapper .piva img {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+}
+.container .wrapper .piva .title {
+  bottom: 0%;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  position: absolute;
+  z-index: 999999;
+}
+.container .wrapper .piva .subscriberCount,
+.container .wrapper .piva .viewCount {
+  background: url('../img/penka.png') center no-repeat;
+  background-size: contain;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  -webkit-transform: translateY(90%);
+          transform: translateY(90%);
+}
+.container .wrapper .piva .count {
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  background: white;
+  padding: 7px 10px;
+  border-radius: 100px;
+  z-index: 2;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+a {
+  color: black;
+  border-bottom: 2px solid black;
+}
+a:hover {
+  text-decoration: none;
+  border-color: blue;
+}
