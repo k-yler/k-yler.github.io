@@ -17,12 +17,12 @@ const sendData = (data) => {
 
 const View = (time) => {
     const count = (time/NEED_VIEW * 100).toFixed(2);
-    view.style.transform = `translateY(${0.9*(100-count)}%)`;
+    view.style.height = `${0.9*(100-count)}%`;
     viewPercent.innerHTML = `${count}%`;
 }
 
 const Subscriber = (person) => {
     const count = (person/NEED_SUBSCRIBERS * 100).toFixed(1);
-    subscriber.style.transform = `translateY(${(100-count)*0.9}%)`;
+    subscriber.style.height = `${(100-count)*0.9}%`;
     subscriberPercent.innerHTML = `${count}%`;
 }
