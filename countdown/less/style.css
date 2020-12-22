@@ -28,6 +28,10 @@ h1 {
       align-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
+  .countdown-time {
+    font-weight: 900;
+    font-size: 35px;
+    margin: 0; }
   .countdown-number {
     /* text-align: center; */
     width: 350px;
@@ -45,9 +49,8 @@ h1 {
             justify-content: center;
     border: 1px solid red;
     padding: 20px;
-    margin: 10px; }
-    .countdown-number span {
-      margin: 5px;
-      font-size: 30px; }
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 30px; }
 
 /*# sourceMappingURL=style.css.map */

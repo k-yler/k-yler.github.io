@@ -22,6 +22,11 @@ h1{
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
+    &-time{
+        font-weight: 900;
+        font-size: 35px;
+        margin: 0;
+    }
     &-number{
         /* text-align: center; */
         width: 350px;
@@ -32,9 +37,7 @@ h1{
         border: 1px solid red;
         padding: 20px;
         margin: 10px;
-        span{
-            margin: 5px;
-            font-size: 30px;
-        }
+        border-radius: 10px;
+        font-size: 30px;
     }
 }
