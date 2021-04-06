@@ -2,7 +2,7 @@ let YEAR = 2021;
 
 const timer = () => {
     let now = new Date();
-    var end = Date.parse(new Date(YEAR, 8, 8, 0, 0, 0, 0));
+    var end = Date.parse(new Date(YEAR, 7, 8, 0, 0, 0, 0));
     console.log(end);
     console.log(now);
 
